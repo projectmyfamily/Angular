@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { font-family: Roboto, "Helvetica Neue", sans-serif; }
+.main{
+    margin-left: 30%;
+}
+.btnVerde{
+        margin: 10px auto;
+        width: 254px;
+        height: 61px;
+        background: rgba(147, 224, 89, 0.9);
+        border: 1px solid #93E059;
+        box-sizing: border-box;
+        border-radius: 5px;
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: bold;
+        color: white;
+}
+.btnCinza{
+margin-left: 300px;
+width: 279px;
+height: 58px;
+background: #4A5248;
+border-radius: 5px;
+color: #93E059;
+font-family: Quicksand;
+font-style: normal;
+font-weight: bold;
+font-size: 29px;
+line-height: 36px;
+}

@@ -1,0 +1,46 @@
+<script>
+     function side() {
+          var side = document.getElementById("side");
+          var main = document.getElementById("main");
+          if (side.style.display !== "none") {
+               side.classList.toggle("sidebarHide");
+               main.classList.toggle("main");
+          }
+     }
+</script>
+<app-menu></app-menu>
+
+<body class="main">
+
+     <div class="card col-md-6 col-12 mx-auto">
+     
+          <div class="card-body">
+                <form class="form-row justify-content-md-center">
+                    
+                         <img class="circular--square" style="margin-right: 120px;" src="background.png" height="200" width="200">
+
+                    <div class="form-group col-md-10 col-12 ">
+                         <p>{{nome}}</p>
+                    </div>
+                    <div class="form-group col-md-10 col-12">
+                         <p>{{idade}}</p>
+                    </div>
+                    <div class="form-group col-md-10 col-12">
+                         <p>{{parentesco}}</p>
+                    </div>
+                    <div class="form-group col-md-10 col-12 ">
+                         <p>Pontos: {{pontos}}</p>
+                    </div>
+                    
+                        <div class="form-group col-md-10 col-12">
+                              <a style="color: #93E059;" routerLink="/cadastro" class="navbar-toggler ">Editar
+                                   perfil</a>
+                         </div>
+                         <div class="form-group col-md-10 col-12">
+                              <a style="color: #93E059;" routerLink="/" class="navbar-toggler ">Sair</a>
+                         </div>
+               </form>
+          </div>
+     </div>
+                         
+  </body>

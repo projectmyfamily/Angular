@@ -1,0 +1,42 @@
+body{
+    background-image: url(src/img/family.png);
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    
+}
+    .myfamily{
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 47px;
+    color: #4A5248;
+    }
+    #paragrafo{
+        font-family: Quicksand;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 42px;
+    color: #000000;
+    text-align: center;
+    }
+.inputEmail{
+    height: 61px;
+    margin-left: 250px;
+    
+
+}
+.btn1{ 
+        height: 61px;
+        background: rgba(147, 224, 89, 0.9);
+        border: 1px solid #93E059;
+        box-sizing: border-box;
+        border-radius: 5px;
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: bold;
+        color: white;
+}
+   

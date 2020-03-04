@@ -1,0 +1,47 @@
+body{
+    background: url(src/img/family.png);
+    background-size:cover;
+    background-position: center;
+    padding-top: 30px;
+}
+h3{
+    margin-top: 20px;
+    color: #93E059;
+    text-align: center; 
+    font-family: Quicksand; 
+    font-style: normal;
+font-weight: bold;
+font-size: 45px;
+line-height: 56px;
+}
+h5{
+    margin-top: 20px;
+    color: #93E059;
+    text-align: center; 
+    font-family: Quicksand; 
+    font-style: normal;
+font-weight: normal;
+font-size: 35px;
+line-height: 44px;
+}
+.card{
+width: 50%;
+height: 625px;
+background: rgba(74, 82, 72, 0.8);
+border-radius: 14px; 
+
+
+}
+.nova{
+    color:white; 
+    text-align: center;
+}
+.ajuda{
+    color:white; 
+    
+}
+.form{
+    
+    margin-top: 20px;
+}
+
