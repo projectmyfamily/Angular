@@ -29,17 +29,17 @@
     }
     .btnEntrar{
         position: absolute; right: 0;
-        width: 130px;
-        height: 55px;
+        width: 150px;
+        height: 61px;
         background: rgba(147, 224, 89, 0.9);
         border: 1px solid #93E059;
         box-sizing: border-box;
         border-radius: 5px;
-        margin-left: 800px;
         font-family: Quicksand;
         font-style: normal;
         font-weight: bold;
-        }
+    }
+    
         .myfamily{
             width: 174px;
             height: 48px;
@@ -49,4 +49,10 @@
             font-size: 38px;
             line-height: 47px;
             color: #4A5248;
+            }
+            h3{
+                margin-top: 50px;
+                text-align: center; 
+                font-family: Quicksand;
+                 font-weight: bold;
             }

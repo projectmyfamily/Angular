@@ -3,6 +3,8 @@ body{
     background-size:cover;
     background-position: center;
     padding-top: 30px;
+    width: 100%;
+    position: absolute;
 }
 h3{
     margin-top: 20px;

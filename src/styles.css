@@ -5,6 +5,9 @@ body { font-family: Roboto, "Helvetica Neue", sans-serif; }
 .main{
     margin-left: 30%;
 }
+.main2{
+    margin-left: 25%;
+}
 .btnVerde{
         margin: 10px auto;
         width: 254px;
