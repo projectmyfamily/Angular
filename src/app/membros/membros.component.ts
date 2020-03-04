@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./membros.component.css']
 })
 export class MembrosComponent implements OnInit {
-  nome = 'João Dolores';
+  nome ="Ana"
+  idade="30"
+  sexo="feminino"
+  parentesco="mãe"
+  pontos="400"
+
   constructor() { }
 
   ngOnInit() {

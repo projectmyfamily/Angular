@@ -29,8 +29,9 @@
     }
     .btnEntrar{
         position: absolute; right: 0;
+        margin-top: 8px;
         width: 150px;
-        height: 61px;
+        height: 50px;
         background: rgba(147, 224, 89, 0.9);
         border: 1px solid #93E059;
         box-sizing: border-box;
