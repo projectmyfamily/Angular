@@ -13,6 +13,10 @@ import { ConvidarComponent } from './convidar/convidar.component';
 import { MembrosComponent } from './membros/membros.component';
 import { MenuComponent } from './menu/menu.component';
 import { AtividadesComponent } from './atividades/atividades.component';
+import { Auth } from './services/auth';
+import { StorageService } from './services/storageService';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule }    from '@angular/forms';
 
 
 @NgModule({
@@ -29,14 +33,23 @@ import { AtividadesComponent } from './atividades/atividades.component';
     MenuComponent,
     AtividadesComponent,
     
+  
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule
+    
     
   ],
-  providers: [],
+  providers: [
+    StorageService,
+        Auth,
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
