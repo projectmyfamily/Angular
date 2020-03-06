@@ -13,6 +13,7 @@ import { ConvidarComponent } from './convidar/convidar.component';
 import { MembrosComponent } from './membros/membros.component';
 import { MenuComponent } from './menu/menu.component';
 import { AtividadesComponent } from './atividades/atividades.component';
+import { SelecaoComponent } from './selecao/selecao.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AtividadesComponent } from './atividades/atividades.component';
     MembrosComponent,
     MenuComponent,
     AtividadesComponent,
+    SelecaoComponent,
     
   ],
   imports: [
