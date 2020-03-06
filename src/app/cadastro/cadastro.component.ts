@@ -1,4 +1,5 @@
-import { Subscribe } from './../services/subscribe';
+import { AccountService } from './../services/account.service';
+import { HomeComponent } from './../home/home.component';
 import { Cadastrar } from './../model/cadastrar';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,6 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
+
+
+
+
 cad: Cadastrar = { 
 nome: "",
 email: "",
@@ -16,22 +21,36 @@ senha: ""
 }
 
 
-  constructor(public sub: Subscribe) { }
+
+
+
+
+  constructor(public account: AccountService, public home: HomeComponent) { }
 
   ngOnInit() {
+
+   
   }
 
 
 
   cadastro(){ 
-    this.sub.cadastrar(this.cad)
+    this.account.insert(this.cad)
     .subscribe(response =>{ 
       console.log("Cadastrado com sucesso")
-
+      
     }), error =>{ 
-      console.log ("Error")
+      console.log (error)
     }
 
   }
+
+  
+test(){ 
+
+
+}
+
+ 
 
 }

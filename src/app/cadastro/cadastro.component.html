@@ -26,7 +26,7 @@
                     <input type="text" class="form-control" required placeholder="Cidade">
                   </div>
                   <div class="form-group col-md-5">
-                    <input type="email" name="email" class="form-control" [(ngModel)]="cad.email" required placeholder="E-mail">
+                    <input type="email" name="email" (value)="email" class="form-control"  [(ngModel)]="cad.email" required placeholder="E-mail">
                   </div>
                
                   <div class="form-group col-md-5">

@@ -1,4 +1,4 @@
-import { Subscribe } from './services/subscribe';
+import { AccountService } from './services/account.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +18,6 @@ import { Auth } from './services/auth';
 import { StorageService } from './services/storageService';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule }    from '@angular/forms';
-
 
 @NgModule({
   declarations: [
@@ -49,7 +48,8 @@ import { FormsModule }    from '@angular/forms';
   providers: [
     StorageService,
         Auth,
-        Subscribe
+        HomeComponent,
+        AccountService
 
   ],
   bootstrap: [AppComponent]
