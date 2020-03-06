@@ -6,16 +6,17 @@
       <h5>Entrar</h5>
       <div class="card-body">
         <form class="form-row form justify-content-md-center">
+          {{err}}
           <div class="form-group col-md-10 col-12">
-            <input type="email" class="form-control" required placeholder="E-mail">
+            <input type="email" class="form-control" name="email" [(ngModel)]="creds.email" required placeholder="E-mail">
           </div>
 
           <div class="form-group col-md-10 col-12">
-            <input type="password" class="form-control" required placeholder="Senha">
+            <input type="password" class="form-control" name="senha" [(ngModel)]="creds.senha" required placeholder="Senha">
           </div>
 
-          <div class="form-group col-12 ">
-            <button routerLink="/logado" class="nav-link btnVerde ">Login</button>
+          <div class="form-group col-md-10 col-12 ">
+            <button  (click)="login()" class="nav-link btnVerde ">Login</button>
           </div>
 
           <div class="form-check col-md-6 col-12 text-center">

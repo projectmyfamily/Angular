@@ -1,3 +1,4 @@
+import { Subscribe } from './services/subscribe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +14,10 @@ import { ConvidarComponent } from './convidar/convidar.component';
 import { MembrosComponent } from './membros/membros.component';
 import { MenuComponent } from './menu/menu.component';
 import { AtividadesComponent } from './atividades/atividades.component';
+import { Auth } from './services/auth';
+import { StorageService } from './services/storageService';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule }    from '@angular/forms';
 import { SelecaoComponent } from './selecao/selecao.component';
 
 
@@ -31,14 +36,24 @@ import { SelecaoComponent } from './selecao/selecao.component';
     AtividadesComponent,
     SelecaoComponent,
     
+  
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule
+    
     
   ],
-  providers: [],
+  providers: [
+    StorageService,
+        Auth,
+        Subscribe
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
