@@ -1,3 +1,4 @@
+import { Subscribe } from './services/subscribe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -48,6 +49,7 @@ import { FormsModule }    from '@angular/forms';
   providers: [
     StorageService,
         Auth,
+        Subscribe
 
   ],
   bootstrap: [AppComponent]

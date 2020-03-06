@@ -17,7 +17,7 @@
         <div class="card-body">
             <form class="form-row form">
                 <div class="form-group col-md-5">
-                  <input type="text" class="form-control" required placeholder="Nome da família">
+                  <input type="text" name="nome" [(ngModel)]="cad.nome" class="form-control" required placeholder="Nome da família">
                 </div>
                 <div class="form-group col-md-5">
                     <input type="text" class="form-control" required placeholder="Estado">
@@ -26,11 +26,11 @@
                     <input type="text" class="form-control" required placeholder="Cidade">
                   </div>
                   <div class="form-group col-md-5">
-                    <input type="email" class="form-control" required placeholder="E-mail">
+                    <input type="email" name="email" class="form-control" [(ngModel)]="cad.email" required placeholder="E-mail">
                   </div>
                
                   <div class="form-group col-md-5">
-                    <input type="password" class="form-control" required placeholder="Senha">
+                    <input type="password" class="form-control" name="senha" [(ngModel)]="cad.senha" required placeholder="Senha">
                   </div>
                   <div class="form-group col-md-5">
                     <input type="text" class="form-control" required placeholder="Nome">
@@ -45,7 +45,7 @@
                 <div class="form-check box">
                   <input type="checkbox" >
                   <label for="">Aceito os termos de privacidade</label>
-                  <button class="nav-link btnVerde ">Cadastrar</button>
+                  <button (click)="cadastro()" class="nav-link btnVerde ">Cadastrar</button>
                 </div>
                 
         </div>
