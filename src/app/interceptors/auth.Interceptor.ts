@@ -2,7 +2,6 @@ import { StorageService } from './../services/storageService';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpRequest, HttpHandler, HttpEvent, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { read } from 'fs';
 
 @Injectable()
 export class AuthInterceptor{ 

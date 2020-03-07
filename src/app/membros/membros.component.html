@@ -1,7 +1,7 @@
 <app-menu></app-menu>
 <body class="main">
      <div class="col-md-12 col-12">
-          <table class="table">
+          <table class="table"  *ngFor = " let membros of membros">
                <tr>
                     <th>Nome</th>
                     <th>Idade</th>
@@ -11,11 +11,12 @@
 
                </tr>
                <tr>
-                    <td>Ana</td>
-                    <td>30</td>
-                    <td>feminino</td>
-                    <td>mãe</td>
-                    <td>400</td>
+                    <td>{{membros.nome}}</td>
+                    <td>{{membros.nascimento}}</td>
+                    <td>{{membros.sexo}}</td>
+                    <td>{{membros.parentesco}}</td>
+                    <td>{{membros.pontuacao}}</td>
+                 
                </tr>
           </table>
      </div>

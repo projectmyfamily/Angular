@@ -49,7 +49,8 @@ import { FormsModule }    from '@angular/forms';
     StorageService,
         Auth,
         HomeComponent,
-        AccountService
+        AccountService, 
+        LogadoComponent
 
   ],
   bootstrap: [AppComponent]
