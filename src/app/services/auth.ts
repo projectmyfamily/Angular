@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CredenciaisDTO } from '../model/credenciaisDTO';
 import { StorageService } from './storageService';
 import { LocalUser } from './../model/localUser';
+import { API_CONFIG } from '../config/api.config';
 
 
 @Injectable()
@@ -17,7 +18,7 @@ constructor(public http: HttpClient, public storage: StorageService){
 
 login(creds: CredenciaisDTO){
     return this.http.post(
-        'http://localhost:8080/login',
+        `${API_CONFIG.baseUrl}/login`,
         creds,{
             observe: 'response',
             responseType: 'text'
@@ -39,8 +40,12 @@ successLogin(authorizationValue: string){
 
 }
 
+remail(email: string){
+    return this.http.post(
+        'http://10.142.47.224:8080/account/email?value=', email
+    )
 
-
+}
 
 
 

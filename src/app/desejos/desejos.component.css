@@ -24,6 +24,7 @@ h3{
         line-height: 50px;
 }
 input{
+    margin-left: 15%;
     background: #FFFFFF;
 border: 1px solid rgba(74, 82, 72, 0.74);
 box-sizing: border-box;

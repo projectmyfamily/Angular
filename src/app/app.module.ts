@@ -18,6 +18,7 @@ import { Auth } from './services/auth';
 import { StorageService } from './services/storageService';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule }    from '@angular/forms';
+import { SelecaoComponent } from './selecao/selecao.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FormsModule }    from '@angular/forms';
     MembrosComponent,
     MenuComponent,
     AtividadesComponent,
+    SelecaoComponent,
     
   
     

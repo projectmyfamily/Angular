@@ -10,7 +10,7 @@
     display: block;
     transition: all 0.5s ease-in;
     overflow: auto;
-    background: url(src/img/background.png);
+    background: url(src/assets/background.png);
 } 
 
 
@@ -26,15 +26,16 @@ p{
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
+    margin-top: 50px;
 }
 
 a{
-/* width: 172px; */
+margin-top: 15px;
 height: 50px;
 font-family: Quicksand;
 font-style: normal;
 font-weight: bold;
-font-size: 30px;
+font-size: 25px;
 line-height: 37px;
 color: #93E059;
 }
@@ -53,7 +54,7 @@ font-style: normal;
 font-weight: normal;
 font-size: 21px;
 color: #93E059;
-position: relative!important;
+position: relative !important;
 }
 
 
@@ -67,4 +68,7 @@ h3{
     font-weight: bold;
     font-size: 45px;
     line-height: 56px;
+}
+.logout{
+    margin-top: 50px;
 }

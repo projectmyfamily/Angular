@@ -1,6 +1,6 @@
 .container{
     width: 1000px;
-    height: 500px;
+    height: 560px;
     background: #FFFFFF;
     border: 1px solid rgba(74, 82, 72, 0.33);
     box-shadow: 0px 4px 40px rgba(74, 82, 72, 0.65);
@@ -12,8 +12,9 @@
         margin-bottom: 100px;
     }
     .form{
-        margin-left: 120px;
-        margin-top: 30px;
+        margin-left: 38%;
+        margin-top: 10px;
+        text-align: center;
     }
     .btnCadastrar{
         margin-left: 310px;
@@ -29,17 +30,18 @@
     }
     .btnEntrar{
         position: absolute; right: 0;
-        width: 130px;
-        height: 55px;
+        margin-top: 8px;
+        width: 150px;
+        height: 50px;
         background: rgba(147, 224, 89, 0.9);
         border: 1px solid #93E059;
         box-sizing: border-box;
         border-radius: 5px;
-        margin-left: 800px;
         font-family: Quicksand;
         font-style: normal;
         font-weight: bold;
-        }
+    }
+    
         .myfamily{
             width: 174px;
             height: 48px;
@@ -49,4 +51,10 @@
             font-size: 38px;
             line-height: 47px;
             color: #4A5248;
+            }
+            h3{
+                margin-top: 50px;
+                text-align: center; 
+                font-family: Quicksand;
+                 font-weight: bold;
             }

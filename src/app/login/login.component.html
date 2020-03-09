@@ -6,7 +6,7 @@
       <h5>Entrar</h5>
       <div class="card-body">
         <form class="form-row form justify-content-md-center">
-          {{err}}
+          <p class="text-light">{{err}}</p>
           <div class="form-group col-md-10 col-12">
             <input type="email" class="form-control" name="email" [(ngModel)]="creds.email" required placeholder="E-mail">
           </div>

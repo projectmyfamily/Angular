@@ -9,6 +9,7 @@ import { TarefasComponent } from './tarefas/tarefas.component';
 import { ConvidarComponent } from './convidar/convidar.component';
 import { MembrosComponent } from './membros/membros.component';
 import { AtividadesComponent } from './atividades/atividades.component';
+import { SelecaoComponent } from './selecao/selecao.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'convidar', component: ConvidarComponent},
   {path: 'membros', component: MembrosComponent},
   {path: 'atividades', component: AtividadesComponent},
+  {path: 'selecao', component: SelecaoComponent},
   {path: '', component: HomeComponent }
 ];
 

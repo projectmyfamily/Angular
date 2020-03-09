@@ -21,7 +21,7 @@ err: string
 
 
 
-  constructor(public auth: Auth, public router: Router, public account: AccountService) { }
+  constructor(public auth: Auth, public router: Router) { }
 
   ngOnInit() {
   }
@@ -34,16 +34,24 @@ err: string
      console.log("login success")
      
      this.router.navigate(["/logado"])
-    
+  
 
     }, error =>{ 
       console.log(error)
+      this.err = "Email ou senha incorretos!"
     })
 }
 
 
 
+account(){
+  this.auth.remail(this.creds.email).subscribe(
+    response =>{ 
+      console.log(response)
+    }
+  ) 
 
+}
 
 
 
