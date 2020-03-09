@@ -11,7 +11,6 @@ import { MembrosComponent } from './membros/membros.component';
 import { AtividadesComponent } from './atividades/atividades.component';
 import { SelecaoComponent } from './selecao/selecao.component';
 
-
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'cadastro', component: CadastroComponent},

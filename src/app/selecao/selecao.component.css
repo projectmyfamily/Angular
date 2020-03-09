@@ -1,7 +1,7 @@
-body{
+.fundo{
     background-size: cover;
     width: 100%;
-    position: fixed;
+    position: absolute;
     height: 100%;
     background: url(src/assets/background.png);
 }
@@ -31,3 +31,4 @@ p{
         background-color:rgba(196, 196, 196, 0.23);
         border-style: solid;
       }
+    

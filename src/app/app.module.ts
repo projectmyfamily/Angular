@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule }    from '@angular/forms';
 import { SelecaoComponent } from './selecao/selecao.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { SelecaoComponent } from './selecao/selecao.component';
     MembrosComponent,
     MenuComponent,
     AtividadesComponent,
-    SelecaoComponent,
+    SelecaoComponent
+    
     
   
     
