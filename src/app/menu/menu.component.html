@@ -1,27 +1,52 @@
 <div class="col-md-3 col-12 menu">
     <ul class="nav">
         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-            <a style="color: #93E059; margin-left:20px;" class="navbar-toggler ">MyFamily</a>
+            <a style="color: #93E059; margin-left:50%;" class="navbar-toggler ">MyFamily</a>
         </li>
         <hr>
         <li class="nav-item col-12">
-            <a style="color: #93E059; margin-left:20px;" routerLink="/convidar" class="nav-link lista">Convidar</a>
+            <a style="color: #93E059; margin-left:20px;" routerLink="/convidar" class="nav-link lista">
+                <i class="material-icons">
+                    insert_invitation
+                </i> Convidar
+            </a>
         </li>
         <li class="nav-item col-12">
-            <a style="color: #93E059; margin-left:20px;" routerLink="/tarefas" class="nav-link lista">Tarefas</a>
+            <a style="color: #93E059; margin-left:20px;" routerLink="/tarefas" class="nav-link lista">
+                <i class="material-icons">
+                    view_list
+                </i> Tarefas 
+            </a>
         </li>
         <li class="nav-item col-12">
-            <a style="color: #93E059; margin-left:20px;" routerLink="/desejos" class="nav-link lista">Desejos</a>
+            <a style="color: #93E059; margin-left:20px;" routerLink="/desejos" class="nav-link lista">
+                <i class="material-icons">
+                    favorite
+                </i> Desejos
+            </a>
         </li>
         <li class="nav-item col-12">
-            <a style="color: #93E059; margin-left:20px;" routerLink="/membros" class="nav-link lista">Membros</a>
+            <a style="color: #93E059; margin-left:20px;" routerLink="/membros" class="nav-link lista">
+                <i class="material-icons">
+                    account_circle
+                </i> Membros
+            </a>
         </li>
         <li class="nav-item col-12">
-            <a style="color: #93E059; margin-left:20px;" routerLink="/atividades" class="nav-link lista">Atividades</a>
+            <a style="color: #93E059; margin-left:20px;" routerLink="/atividades" class="nav-link lista">
+                <i class="material-icons">
+                    announcement
+                </i> Atividades
+            </a>
         </li>
     </ul>
     <div class="p">
         <hr>
-        <a class="navbar-toggler" style="margin-left:20px;" routerLink="/logado">Olá, {{nome}}</a>
+        <a class="navbar-toggler" style="margin-left:15%;" routerLink="/logado">Olá, {{nome}}</a>
     </div>
+
+    <div class="logout">
+        <a class="navbar-toggler" style="margin-left:15%;" routerLink="/">Sair</a>
+    </div>
+
 </div>

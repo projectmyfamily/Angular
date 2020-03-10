@@ -3,7 +3,7 @@ body{
     width: 100%;
     position: fixed;
     height: 100%;
-    background: url(src/img/background.png);
+    background: url(src/assets/background.png);
 }
 .myfamily{
     font-family: Quicksand;
@@ -30,3 +30,16 @@ p{
         background-color:rgba(196, 196, 196, 0.23);
         border-style: solid;
       }
+      .form{
+        margin-left: 10%;
+        margin-top: 30px;
+    }
+    h5{
+        margin-left: 25%;
+        font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 47px;
+    color: #4A5248;
+    }
