@@ -31,4 +31,16 @@ p{
         background-color:rgba(196, 196, 196, 0.23);
         border-style: solid;
       }
-    
+      .form{
+        margin-left: 10%;
+        margin-top: 30px;
+    }
+    h5{
+        margin-left: 25%;
+        font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 47px;
+    color: #4A5248;
+    }
