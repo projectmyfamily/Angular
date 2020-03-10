@@ -17,22 +17,26 @@
 
     <div class="card-body">
 
-      <form class="form justify-content-md-center">
-        <div class="form-group col-md-5">
-          <input type="text" name="nome" class="form-control" [(ngModel)]="cad.nome" required placeholder="Nome da família">
+      <form class="form">
+
+        <div class="form-group ">
+          <input type="text" class="form-control text-center" [(ngModel)]="cad.nome" required
+            placeholder="Nome da família">
         </div>
-        <div class="form-group col-md-5">
-          <input type="text" class="form-control" required placeholder="Estado">
+        <div class="form-group ">
+          <input type="text" class="form-control text-center" required placeholder="Estado">
         </div>
-        <div class="form-group col-md-5">
-          <input type="text" class="form-control" required placeholder="Cidade">
+        <div class="form-group ">
+          <input type="text" class="form-control text-center" required placeholder="Cidade">
         </div>
-        <div class="form-group col-md-5">
-          <input type="email" class="form-control" name="email" [(ngModel)]="cad.email" required placeholder="E-mail">
+        <div class="form-group ">
+          <input type="email" class="form-control text-center" name="email" [(ngModel)]="cad.email" required
+            placeholder="E-mail">
         </div>
 
-        <div class="form-group col-md-5">
-          <input type="password" class="form-control" name="senha" [(ngModel)]="cad.senha" required placeholder="Senha">
+        <div class="form-group ">
+          <input type="password" class="form-control text-center" name="senha" [(ngModel)]="cad.senha" required
+            placeholder="Senha">
         </div>
 
       </form>
@@ -40,7 +44,7 @@
       <div class="form-check box">
         <input type="checkbox">
         <label for="">Aceito os termos de privacidade</label>
-        <button class="nav-link btnVerde " (click)="cadastro()">Cadastrar</button>
+        <button class="nav-link btnVerde col-md-5 col-12 " (click)="cadastro()">Cadastrar</button>
       </div>
 
     </div>
