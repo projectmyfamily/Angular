@@ -33,7 +33,7 @@ err: string
     this.auth.successLogin(response.headers.get('Authorization'));
      console.log("login success")
      
-     this.router.navigate(["/logado"])
+     this.router.navigate(["/selecao"])
   
 
     }, error =>{ 

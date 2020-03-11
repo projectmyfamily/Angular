@@ -1,6 +1,5 @@
 <!-- início do modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -12,30 +11,36 @@
 
             <div class="modal-body">
                 <form class="col-12 form ">
+                        <form action="">
+                                <input type="file" name="foto" (change) = selectFile($event)>
+                              </form>
+                              
+                              <img [src]="base64textString" alt="">
+
                     <div class="form-group col-md-9 ">
-                        <input type="text" class="form-control" required placeholder="Nome">
+                        <input type="text" name="nome" [(ngModel)]="cad.nome" class="form-control" required placeholder="Nome">
                     </div>
                     <div class="form-group col-md-9 ">
-                        <input type="text" class="form-control" required placeholder="Parentesco">
+                        <input type="text" class="form-control" name="parentesco" [(ngModel)]="cad.parentesco" required placeholder="Parentesco">
                     </div>
                     <div class="form-group col-md-9 ">
-                        <input type="text" class="form-control" required placeholder="Idade">
+                        <input type="text" class="form-control" name="idade" [(ngModel)]="cad.idade" required placeholder="Idade">
                     </div>
                     <div class="form-group col-md-9 ">
-                        <input type="text" class="form-control" required placeholder="Sexo">
+                        <input type="text" class="form-control" name="sexo" [(ngModel)]="cad.sexo" required placeholder="Sexo">
                     </div>
 
                     <div class="form-group col-md-9 ">
-                        <input type="password" class="form-control" required placeholder="PIN">
+                        <input type="password" class="form-control" name="pin" [(ngModel)]="cad.pin" required placeholder="PIN">
                     </div>
 
                 </form>
             </div>
-            
+
             <div class="modal-footer">
-                <button type="button" class="btnVerde">Salvar</button>
+                <button type="button" (click)="cadastro()" class="btnVerde">Salvar</button>
             </div>
-            
+
         </div>
     </div>
 </div>
@@ -60,7 +65,11 @@
             <p>Selecionar perfil</p>
         </div>
 
-        <div class="form-group text-center">
+        <div class="row justify-content-md-center">
+            <button *ngFor="let membros of membros" class="btn btn-custom">
+                <p>{{membros.nome}}</p>
+            </button>
+
             <button class="btn btn-custom" data-toggle="modal" data-target="#exampleModalCenter">
                 <img src="assets/add.svg" alt="">
             </button>

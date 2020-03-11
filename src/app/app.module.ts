@@ -19,6 +19,7 @@ import { StorageService } from './services/storageService';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule }    from '@angular/forms';
 import { SelecaoComponent } from './selecao/selecao.component';
+import { RetornoBanco } from './services/retorno.banco';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { SelecaoComponent } from './selecao/selecao.component';
         Auth,
         HomeComponent,
         AccountService, 
-        LogadoComponent
+        LogadoComponent, 
+        RetornoBanco
 
   ],
   bootstrap: [AppComponent]
