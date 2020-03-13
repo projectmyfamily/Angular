@@ -27,9 +27,11 @@
               "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": ["./node_modules/jquery/dist/jquery.js",
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
               "./node_modules/popper.js/dist/umd/popper.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.js"]
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -126,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "myfamily"
+  "defaultProject": "myfamily",
+  "cli": {
+    "analytics": "a0ec6f10-4ff8-41c0-ae6a-717b8629226c"
+  }
 }
