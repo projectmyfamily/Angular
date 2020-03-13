@@ -7,6 +7,7 @@ import { MembrosCadastrar } from '../model/membros.cadastrar';
 import { Router } from '@angular/router';
 import { MembrosService } from '../services/membros.service';
 import { encode } from 'punycode';
+import { HttpUrlEncodingCodec } from '@angular/common/http';
 
 
 @Component({
@@ -34,7 +35,8 @@ cad: MembrosCadastrar = {
     public storage: StorageService, 
     public account: AccountService, 
     public router: Router,
-    public membro: MembrosService
+    public membro: MembrosService,
+    public e: HttpUrlEncodingCodec
   ) { }
 
   ngOnInit() {
@@ -85,6 +87,7 @@ cadastro(){
       reader.onload = this.handleFile.bind(this);
 
       reader.readAsBinaryString(file);
+      
     }
   }
 
@@ -94,11 +97,8 @@ cadastro(){
     console.log(btoa(binaryString));
   }
 
-
 logado(id: string){ 
-let localId = encode(id); 
-console.log(localId);
-//this.router.navigate([`/logado?`])
+this.router.navigate(['/logado', id]);
   
 
 }

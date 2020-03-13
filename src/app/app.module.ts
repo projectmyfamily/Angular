@@ -16,7 +16,7 @@ import { MenuComponent } from './menu/menu.component';
 import { AtividadesComponent } from './atividades/atividades.component';
 import { Auth } from './services/auth';
 import { StorageService } from './services/storageService';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpUrlEncodingCodec } from '@angular/common/http';
 import { FormsModule }    from '@angular/forms';
 import { SelecaoComponent } from './selecao/selecao.component';
 import { RetornoBanco } from './services/retorno.banco';
@@ -58,7 +58,8 @@ import { MembrosService } from './services/membros.service';
         AccountService, 
         LogadoComponent, 
         RetornoBanco,
-        MembrosService
+        MembrosService,
+        HttpUrlEncodingCodec
 
   ],
   bootstrap: [AppComponent]

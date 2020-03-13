@@ -21,7 +21,8 @@ const routes: Routes = [
   {path: 'membros', component: MembrosComponent},
   {path: 'atividades', component: AtividadesComponent},
   {path: 'selecao', component: SelecaoComponent},
-  {path: '', component: HomeComponent }
+  {path: '', component: HomeComponent },
+  {path: 'logado/:id', component: LogadoComponent},
 ];
 
 @NgModule({
