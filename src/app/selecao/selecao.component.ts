@@ -15,12 +15,13 @@ import { encode } from 'punycode';
   styleUrls: ['./selecao.component.css']
 })
 export class SelecaoComponent implements OnInit {
-  base64textString: string;
+base64textString: string;
 ac: any;
-membros: any;
+membros: any[] = [];
 idAccount: string
 idMembro: any
 cad: MembrosCadastrar = { 
+  foto: "",
   nome: "",
   parentesco: "", 
   sexo: "", 
@@ -102,11 +103,6 @@ console.log(localId);
   
 
 }
-
-
-
-
-
 
 
 

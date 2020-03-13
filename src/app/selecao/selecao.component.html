@@ -12,6 +12,10 @@
             <div class="modal-body">
                 <form class="col-12 form ">
 
+                    <div class="form-group col-md-9">
+                        <input type="file" name="foto" [(ngModel)]="cad.foto" (change)= selectFile($event)>
+                    </div>
+
                     <div class="form-group col-md-9 ">
                         <input type="text" name="nome" [(ngModel)]="cad.nome" class="form-control" required placeholder="Nome">
                     </div>
@@ -48,7 +52,7 @@
         <div class="row">
 
             <div class="col-md-6 col-12">
-                <a class="navbar-toggler myfamily" style="color:#93E059;" routerLink="/">MyFamily</a>
+                <a class="navbar-toggler myfamily" style="color:#93E059;" >MyFamily</a>
             </div>
 
             <div class="col-md-6 col-12 text-right">
@@ -61,11 +65,12 @@
         </div>
 
         <div class="row justify-content-md-center">
-            <button *ngFor="let membros of membros"  (click)="logado(membros.id)" class="btn btn-custom">
-                <p>{{membros.nome}}</p>
+            <button *ngFor="let m of membros" (click)="logado(m.id)" class="btn btn-custom">
+                <p>{{m.nome}}</p>
+                <img src ="{{m.foto}}" alt="">
             </button>
 
-            <button *ngIf="membros.length <= 5" class="btn btn-custom" data-toggle="modal" data-target="#exampleModalCenter">
+            <button *ngIf="membros.length <= 7" class="btn btn-custom" data-toggle="modal" data-target="#exampleModalCenter">
                 <img src="assets/add.svg" alt="">
             </button>
         </div>
@@ -78,8 +83,8 @@
 
 
 
-<!-- <form action=""> -->
-        <!-- <input type="file" name="foto" (change) = selectFile($event)> -->
-<!-- </form> -->
+<!-- <form action=""> 
+         <input type="file" name="foto" (change) = selectFile($event)> 
+ </form> 
       
-      <!-- <img [src]="base64textString" alt=""> -->
+       <img [src]="base64textString" alt=""> -->
