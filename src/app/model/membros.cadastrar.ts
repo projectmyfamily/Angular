@@ -6,5 +6,4 @@ export interface MembrosCadastrar{
     idade: string,
     pin: string,
     sexo: string,
-    account: any
 }

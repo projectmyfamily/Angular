@@ -46,9 +46,9 @@ export class AccountService {
     }
 
 
-    insertMembros(cad : MembrosCadastrar) {
+    insertMembros(cad : MembrosCadastrar, id: string) {
         return this.http.post(
-            `${API_CONFIG.baseUrl}/membros`, 
+            `${API_CONFIG.baseUrl}/membros/account/${id}`, 
             cad,
             { 
                 observe: 'response', 

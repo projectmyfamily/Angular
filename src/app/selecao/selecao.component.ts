@@ -1,9 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵSWITCH_COMPILE_NGMODULE__POST_R3__ } from '@angular/core';
 import { RetornoBanco } from '../services/retorno.banco';
 import { AccountDTO } from '../model/accountDTO';
 import { StorageService } from '../services/storageService';
 import { AccountService } from '../services/account.service';
 import { MembrosCadastrar } from '../model/membros.cadastrar';
+import { Router } from '@angular/router';
+import { MembrosService } from '../services/membros.service';
+import { encode } from 'punycode';
 
 
 @Component({
@@ -15,19 +18,24 @@ export class SelecaoComponent implements OnInit {
   base64textString: string;
 ac: any;
 membros: any;
-user = this.ac;
+idAccount: string
+idMembro: any
 cad: MembrosCadastrar = { 
   nome: "",
   parentesco: "", 
   sexo: "", 
   idade: "",
   pin: "",
-  account: this.user
 
 }
 
 
-  constructor(public storage: StorageService, public account: AccountService) { }
+  constructor(
+    public storage: StorageService, 
+    public account: AccountService, 
+    public router: Router,
+    public membro: MembrosService
+  ) { }
 
   ngOnInit() {
 this.loadUser();
@@ -41,6 +49,7 @@ loadUser(){
         .subscribe(response => {
           this.ac = response as AccountDTO;
           this.membros = this.ac.membros
+          this.idAccount = this.ac.id
         },
         error => {
           if (error.status == 403) {
@@ -54,7 +63,9 @@ loadUser(){
 }
 
 cadastro(){ 
-  this.account.insertMembros(this.cad)
+  console.log(this.cad)
+  console.log(this.idAccount)
+  this.account.insertMembros(this.cad, this.idAccount)
   .subscribe(response =>{ 
     console.log("Cadastrado com sucesso")
     this.loadUser();
@@ -83,6 +94,14 @@ cadastro(){
     console.log(btoa(binaryString));
   }
 
+
+logado(id: string){ 
+let localId = encode(id); 
+console.log(localId);
+//this.router.navigate([`/logado?`])
+  
+
+}
 
 
 
