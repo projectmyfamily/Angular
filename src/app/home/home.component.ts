@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { StorageService } from './../services/storageService';
 import { Component, OnInit } from '@angular/core';
 import { EmailValidator } from '@angular/forms';
 
@@ -8,12 +10,15 @@ import { EmailValidator } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
 
-
+email: any = null
 
  
 
 
-  constructor() { 
+  constructor(
+    private storage: StorageService,
+    public router: Router
+  ) { 
    
   }
 
@@ -22,7 +27,14 @@ export class HomeComponent implements OnInit {
   }
 
   
-
+subscribe(){ 
+  if(this.email != null){
+  this.storage.setAny(this.email);
+  }else{ 
+    this.storage.setAny(null)
+  }
+  this.router.navigate(["/cadastro"])
+}
 
 
 

@@ -1,3 +1,4 @@
+import { StorageService } from './../services/storageService';
 import { AccountService } from './../services/account.service';
 import { HomeComponent } from './../home/home.component';
 import { Cadastrar } from './../model/cadastrar';
@@ -25,10 +26,14 @@ senha: ""
 
 
 
-  constructor(public account: AccountService, public home: HomeComponent) { }
+  constructor(public account: AccountService, 
+    public home: HomeComponent,
+    private storage: StorageService
+
+    ) { }
 
   ngOnInit() {
-
+    this.cad.email = this.storage.getAny()
    
   }
 

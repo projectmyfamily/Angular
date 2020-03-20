@@ -1,6 +1,7 @@
+import { Router } from '@angular/router';
+import { AccountDTO } from './../model/accountDTO';
 import { Component, OnInit } from '@angular/core';
 import { RetornoBanco } from '../services/retorno.banco';
-import { AccountDTO } from '../model/accountDTO';
 import { StorageService } from '../services/storageService';
 import { AccountService } from '../services/account.service';
 import { MembrosCadastrar } from '../model/membros.cadastrar';
@@ -14,22 +15,25 @@ import { MembrosCadastrar } from '../model/membros.cadastrar';
 export class SelecaoComponent implements OnInit {
   base64textString: string;
 ac: any;
-membros: any;
-user = this.ac;
+membros: any = [];
+user: any
 cad: MembrosCadastrar = { 
   nome: "",
   parentesco: "", 
   sexo: "", 
-  idade: "",
+  nascimento: "",
   pin: "",
-  account: this.user
+
 
 }
 
 
-  constructor(public storage: StorageService, public account: AccountService) { }
+  constructor(public storage: StorageService, public account: AccountService, public router: Router) { }
 
   ngOnInit() {
+   if( this.storage.getLocalUser() == null){
+     this.router.navigate(["/"])
+   }
 this.loadUser();
 
 }
@@ -41,6 +45,8 @@ loadUser(){
         .subscribe(response => {
           this.ac = response as AccountDTO;
           this.membros = this.ac.membros
+          this.user = this.ac.id
+          
         },
         error => {
           if (error.status == 403) {
@@ -54,10 +60,10 @@ loadUser(){
 }
 
 cadastro(){ 
-  this.account.insertMembros(this.cad)
+
+  this.account.insertMembros(this.cad, this.user)
   .subscribe(response =>{ 
     console.log("Cadastrado com sucesso")
-    this.loadUser();
   }), error =>{ 
     console.log (error)
   }
@@ -83,6 +89,22 @@ cadastro(){
     console.log(btoa(binaryString));
   }
 
+
+  logado(id: string){ 
+    var index = this.membros.map(function(element) {
+      return element.id
+    }).indexOf(id)
+    this.storage.setLocalMember(this.membros[index])
+    this.router.navigate(["/logado/", index])
+  }
+
+  logout(){ 
+    this.storage.setLocalUser(null)
+    this.storage.setAny(null)
+    this.storage.setArrayMember(null)
+    this.storage.setLocalMember(null)
+    this.router.navigate(["/"])
+  }
 
 
 

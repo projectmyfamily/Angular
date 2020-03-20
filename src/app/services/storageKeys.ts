@@ -1,3 +1,6 @@
 export const StorageKeys = { 
-    localUser: "LocalUser"
+    localUser: "LocalUser",
+    localMember: "LocalMember",
+    arrayMember: "ArrayMember",
+    anyInfo: "AnyInfo"
 }
