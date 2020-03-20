@@ -1,3 +1,4 @@
+import { StorageService } from './../services/storageService';
 import { AccountService } from './../services/account.service';
 import { Component, OnInit } from '@angular/core';
 import { Auth } from '../services/auth';
@@ -21,9 +22,12 @@ err: string
 
 
 
-  constructor(public auth: Auth, public router: Router) { }
+  constructor(public auth: Auth, public router: Router, public storage: StorageService) { }
 
   ngOnInit() {
+if(this.storage.getLocalUser()){ 
+ this.router.navigate(["/selecao"])
+}
   }
 
 

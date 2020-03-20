@@ -23,7 +23,7 @@
                         <input type="text" class="form-control" name="parentesco" [(ngModel)]="cad.parentesco" required placeholder="Parentesco">
                     </div>
                     <div class="form-group col-md-9 ">
-                        <input type="text" class="form-control" name="idade" [(ngModel)]="cad.idade" required placeholder="Idade">
+                        <input type="date" class="form-control" name="nascimento" [(ngModel)]="cad.nascimento" required placeholder="Idade">
                     </div>
                     <div class="form-group col-md-9 ">
                         <input type="text" class="form-control" name="sexo" [(ngModel)]="cad.sexo" required placeholder="Sexo">
@@ -56,7 +56,7 @@
             </div>
 
             <div class="col-md-6 col-12 text-right">
-                <button class="navbar-toggler myfamily" routerLink="/">Sair</button>
+                <button class="navbar-toggler myfamily" (click)="logout()" >Sair</button>
             </div>
         </div>
 
@@ -65,26 +65,22 @@
         </div>
 
         <div class="row justify-content-md-center">
-            <button *ngFor="let m of membros" (click)="logado(m.id)" class="btn btn-custom">
-                <p>{{m.nome}}</p>
-                <img src ="{{m.foto}}" alt="">
+            <button (click)="logado(membros.id)" *ngFor="let membros of membros" class="btn btn-custom">
+                <p>{{membros.nome}}</p>
             </button>
-
-            <button *ngIf="membros.length <= 7" class="btn btn-custom" data-toggle="modal" data-target="#exampleModalCenter">
-                <img src="assets/add.svg" alt="">
-            </button>
+            <div >
+                <button *ngIf="membros.length < 6" class="btn btn-custom col-12" data-toggle="modal" data-target="#exampleModalCenter">
+                    <img src="assets/add.svg" alt="">
+                </button>
+            </div>
         </div>
 
     </div>
 
 </body>
 
-
-
-
-
-<!-- <form action=""> 
-         <input type="file" name="foto" (change) = selectFile($event)> 
- </form> 
+<!-- <form action=""> -->
+        <!-- <input type="file" name="foto" (change) = selectFile($event)> -->
+<!-- </form> -->
       
        <img [src]="base64textString" alt=""> -->

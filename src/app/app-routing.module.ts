@@ -21,6 +21,7 @@ const routes: Routes = [
   {path: 'membros', component: MembrosComponent},
   {path: 'atividades', component: AtividadesComponent},
   {path: 'selecao', component: SelecaoComponent},
+  {path:  'logado/:id', component: LogadoComponent},
   {path: '', component: HomeComponent }
 ];
 

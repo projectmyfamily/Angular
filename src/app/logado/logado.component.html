@@ -21,16 +21,16 @@
                               width="150">
                     </div>
                     <div class="form-group col-md-10 col-12 ">
-                         <p>{{nome}}</p>
+                         <p> Nome: {{membro.nome}}</p>
                     </div>
                     <div class="form-group col-md-10 col-12">
-                         <p>{{idade}}</p>
+                         <p>Data de Nascimento {{membro.nascimento}}</p>
                     </div>
                     <div class="form-group col-md-10 col-12">
-                         <p>{{parentesco}}</p>
+                         <p>Parentesco: {{membro.parentesco}}</p>
                     </div>
                     <div class="form-group col-md-10 col-12 ">
-                         <p>Pontos: {{pontos}}</p>
+                         <p>Pontos: {{membro.pontos}}</p>
                     </div>
 
                     <div class="form-group col-md-10 col-12">
@@ -42,7 +42,7 @@
                               perfil</a>
                     </div>
                     <div class="form-group col-md-10 col-12">
-                         <a style="color: #93E059;" routerLink="/" class="navbar-toggler ">Sair</a>
+                         <a style="color: #93E059;" (click)="logout()" class="navbar-toggler ">Sair</a>
                     </div>
                </form>
           </div>

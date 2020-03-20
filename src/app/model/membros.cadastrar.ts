@@ -4,7 +4,7 @@ export interface MembrosCadastrar{
     foto: string,
     nome: string,
     parentesco: string,
-    idade: string,
+    nascimento: string,
     pin: string,
     sexo: string,
 }

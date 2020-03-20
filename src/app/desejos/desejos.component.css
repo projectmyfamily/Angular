@@ -40,3 +40,16 @@ border-radius: 14px;
     /* margin-left: 60px; */
     margin-top: 20px;
 }
+.btnadd{
+margin-left: 40%;
+width: 279px;
+height: 58px;
+background: #4A5248;
+border-radius: 25px;
+color: #93E059;
+font-family: Quicksand;
+font-style: normal;
+font-weight: bold;
+font-size: 29px;
+line-height: 36px;
+}

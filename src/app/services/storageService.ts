@@ -24,4 +24,56 @@ export class StorageService{
 
     }
 
+    getLocalMember(){ 
+        let usr = localStorage.getItem(StorageKeys.localMember)
+        if(usr == null){ 
+            return null
+        }else{
+            return JSON.parse(usr)
+        }
+    }
+    setLocalMember(obj: LocalUser){ 
+        if(obj == null){
+            localStorage.removeItem(StorageKeys.localMember)
+        }else{
+            localStorage.setItem(StorageKeys.localMember, JSON.stringify(obj))
+        }
+
+    }
+
+    getArrayMember(){ 
+        let usr = localStorage.getItem(StorageKeys.arrayMember)
+        if(usr == null){ 
+            return null
+        }else{
+            return JSON.parse(usr)
+        }
+    }
+    setArrayMember(obj: LocalUser){ 
+        if(obj == null){
+            localStorage.removeItem(StorageKeys.arrayMember)
+        }else{
+            localStorage.setItem(StorageKeys.arrayMember, JSON.stringify(obj))
+        }
+
+    }
+
+    getAny(){ 
+        let usr = localStorage.getItem(StorageKeys.anyInfo)
+        if(usr == null){ 
+            return null
+        }else{
+            return JSON.parse(usr)
+        }
+    }
+    setAny(obj: LocalUser){ 
+        if(obj == null){
+            localStorage.removeItem(StorageKeys.anyInfo)
+        }else{
+            localStorage.setItem(StorageKeys.anyInfo, JSON.stringify(obj))
+        }
+
+    }
+
+
 }

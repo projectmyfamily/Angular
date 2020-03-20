@@ -19,8 +19,8 @@
       </p>
 
       <div class="input-group col-12 ">
-        <input [(ngModel)]="email"  class="inputEmail col-5 " placeholder="E-mail">
-        <button class="nav-link btn1 "  routerLink="/cadastro" >Entre para o MyFamily</button>
+        <input name="email" [(ngModel)]="email"  class="inputEmail col-5 " placeholder="E-mail">
+        <button class="nav-link btn1 " (click)="subscribe()" >Entre para o MyFamily</button>
       </div>
 
       <div class="col-12 ">
