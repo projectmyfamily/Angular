@@ -5,6 +5,9 @@ import { RetornoBanco } from '../services/retorno.banco';
 import { StorageService } from '../services/storageService';
 import { AccountService } from '../services/account.service';
 import { MembrosCadastrar } from '../model/membros.cadastrar';
+import { MembrosService } from '../services/membros.service';
+import { encode } from 'punycode';
+import { HttpUrlEncodingCodec } from '@angular/common/http';
 
 
 @Component({
@@ -23,7 +26,6 @@ cad: MembrosCadastrar = {
   sexo: "", 
   nascimento: "",
   pin: "",
-
 
 }
 
@@ -80,6 +82,7 @@ cadastro(){
       reader.onload = this.handleFile.bind(this);
 
       reader.readAsBinaryString(file);
+      
     }
   }
 
@@ -88,6 +91,7 @@ cadastro(){
     this.base64textString = 'data:image/jpeg;base64,' + btoa(binaryString);
     console.log(btoa(binaryString));
   }
+
 
 
   logado(id: string){ 
