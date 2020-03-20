@@ -11,9 +11,9 @@
 
             <div class="modal-body">
                 <form class="col-12 form ">
-
+                    {{subscribe}}
                     <div class="form-group col-md-9 ">
-                        <input type="text" name="nome" [(ngModel)]="cad.nome" class="form-control" required placeholder="Nome">
+                        <input type="text" name="nome" maxlength="10" minlength="4" [(ngModel)]="cad.nome" class="form-control" required placeholder="Nome">
                     </div>
                     <div class="form-group col-md-9 ">
                         <input type="text" class="form-control" name="parentesco" [(ngModel)]="cad.parentesco" required placeholder="Parentesco">
@@ -28,7 +28,7 @@
                     <div class="form-group col-md-9 ">
                         <input type="password" class="form-control" name="pin" [(ngModel)]="cad.pin" required placeholder="PIN">
                     </div>
-
+                  
                 </form>
             </div>
 
@@ -70,7 +70,8 @@
                 </button>
             </div>
         </div>
-
+        <div class="text-center">
+        </div>
     </div>
 
 </body>
