@@ -29,9 +29,13 @@ cad: MembrosCadastrar = {
 
 }
 
-subscribe = "";
+  constructor(
+    public storage: StorageService,
+     public account: AccountService,
+     public router: Router
+     ) { 
 
-  constructor(public storage: StorageService, public account: AccountService, public router: Router) { }
+     }
 
   ngOnInit() {
    if( this.storage.getLocalUser() == null){
@@ -66,8 +70,6 @@ cadastro(){
 
   this.account.insertMembros(this.cad, this.user)
   .subscribe(response =>{ 
-    console.log("Cadastrado com sucesso")
-    this.subscribe = "Cadastrado com Sucesso!"
     location.reload();
   }), error =>{ 
     console.log (error)
