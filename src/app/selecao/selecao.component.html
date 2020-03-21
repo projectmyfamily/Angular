@@ -12,9 +12,14 @@
 
             <div class="modal-body">
                 <form class="col-12 form ">
-                    {{subscribe}}
+
+                    <div class="form-group col-md-9">
+                        <input type="file" name="foto" [(ngModel)]="cad.foto" (change)=selectFile($event)>
+                    </div>
+
                     <div class="form-group col-md-9 ">
-                        <input type="text" name="nome" maxlength="10" minlength="4" [(ngModel)]="cad.nome" class="form-control" required placeholder="Nome">
+                        <input type="text" name="nome" maxlength="10" minlength="4" [(ngModel)]="cad.nome" class="form-control" required
+                            placeholder="Nome">
                     </div>
                     <div class="form-group col-md-9 ">
                         <input type="text" class="form-control" name="parentesco" [(ngModel)]="cad.parentesco" required
@@ -53,7 +58,7 @@
         <div class="row">
 
             <div class="col-md-6 col-12">
-                <a class="navbar-toggler myfamily" style="color:#93E059;" routerLink="/">MyFamily</a>
+                <a class="navbar-toggler myfamily" style="color:#93E059;">MyFamily</a>
             </div>
 
             <div class="col-md-6 col-12 text-right">
@@ -66,24 +71,61 @@
         </div>
 
         <div class="row justify-content-md-center">
-            <button (click)="logado(membros.id)" *ngFor="let membros of membros" class="btn btn-custom">
-                <p>{{membros.nome}}</p>
-            </button>
+            <a *ngFor="let membros of membros" class="btn btn-custom">
+                <p data-toggle="modal" (click)="pegaPin(membros.pin, membros.id)" data-target="#exampleModal"  id="nome">{{membros.nome}}</p>
+                <i (click)="deletar(membros.id)" type="submit" class="btn material-icons">
+                    highlight_off
+                </i>
+            </a>
             <div>
-                <button *ngIf="membros.length < 6" class="btn btn-custom" data-toggle="modal"
+                <a *ngIf="membros.length < 6" class="btn btn-custom col-12" data-toggle="modal"
                     data-target="#exampleModalCenter">
                     <img src="assets/add.svg" alt="">
-                </button>
+                </a>
             </div>
         </div>
         <div class="text-center">
         </div>
     </div>
 
+
+
+
+<!-- Modal perfil-->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+            <form class="col-12 form ">
+                
+                <div class="form-group col-md-9">
+                    <p class="text-dark">Digite seu pin</p>
+                    <input type="password" name="pinPass" [(ngModel)]="pinPass" >
+                </div>
+          
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" (click)="pass(membros.pin, membros.id)" class="btn btn-primary">Acessar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 </body>
+
+
+
 
 <!-- <form action=""> -->
 <!-- <input type="file" name="foto" (change) = selectFile($event)> -->
 <!-- </form> -->
 
-<!-- <img [src]="base64textString" alt=""> -->
+<img [src]="base64textString" alt=""> -->
+
+
+

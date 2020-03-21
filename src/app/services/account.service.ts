@@ -58,7 +58,10 @@ export class AccountService {
     }
 
 
+    deleteMembros(id: string):Observable<void>{ 
+        return this.http.delete<void>(`${API_CONFIG.baseUrl}/membros/${id}`)
 
+    }
 
   
 }

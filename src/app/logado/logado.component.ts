@@ -38,6 +38,10 @@ export class LogadoComponent implements OnInit {
       this.router.navigate(["/"])
 
     }
+    if(this.storage.getAny() == true){ 
+      location.reload()
+      this.storage.setAny(null)
+    }
 
 
   }

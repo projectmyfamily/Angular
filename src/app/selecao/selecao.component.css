@@ -1,11 +1,11 @@
-.fundo{
+    .fundo{
     background-size: cover;
     width: 100%;
     position: absolute;
     height: 100%;
     background: url(src/assets/background.png);
-}
-.myfamily{
+    }
+    .myfamily{
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
@@ -13,7 +13,13 @@
     line-height: 47px;
     color: #93E059;
     }
-p{
+    #nome{
+        margin-top: 35%;
+    }
+    img{
+        margin-top: 35%;
+    }
+    p{
     margin-top: 10%;
    font-family: Quicksand;
    font-style: normal;
@@ -31,7 +37,7 @@ p{
         background-color:rgba(196, 196, 196, 0.23);
         border-style: solid;
       }
-      .form{
+    .form{
         margin-left: 10%;
         margin-top: 30px;
     }
@@ -44,3 +50,4 @@ p{
     line-height: 47px;
     color: #4A5248;
     }
+    

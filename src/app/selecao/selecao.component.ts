@@ -1,13 +1,10 @@
 import { Router } from '@angular/router';
 import { AccountDTO } from './../model/accountDTO';
 import { Component, OnInit } from '@angular/core';
-import { RetornoBanco } from '../services/retorno.banco';
 import { StorageService } from '../services/storageService';
 import { AccountService } from '../services/account.service';
 import { MembrosCadastrar } from '../model/membros.cadastrar';
-import { MembrosService } from '../services/membros.service';
-import { encode } from 'punycode';
-import { HttpUrlEncodingCodec } from '@angular/common/http';
+
 
 
 @Component({
@@ -16,11 +13,12 @@ import { HttpUrlEncodingCodec } from '@angular/common/http';
   styleUrls: ['./selecao.component.css']
 })
 export class SelecaoComponent implements OnInit {
-  base64textString: string;
+base64textString: string;
 ac: any;
 membros: any = [];
 user: any
 cad: MembrosCadastrar = { 
+  foto: "",
   nome: "",
   parentesco: "", 
   sexo: "", 
@@ -28,6 +26,10 @@ cad: MembrosCadastrar = {
   pin: "",
 
 }
+
+pinPass = "";
+pinUser = "";
+idMembro = "";
 
   constructor(
     public storage: StorageService,
@@ -105,6 +107,8 @@ cadastro(){
     }).indexOf(id)
     this.storage.setLocalMember(this.membros[index])
     this.router.navigate(["/logado/", index])
+    this.storage.setAny(true)
+  
   }
 
   logout(){ 
@@ -117,8 +121,30 @@ cadastro(){
 
 
 
+  deletar(id: string){ 
+    this.account.deleteMembros(id).subscribe(response => { 
+      console.log("Membro deletado")
+      location.reload();
+    }); error => { 
+      console.log(error)
+    }
+  }
 
 
+pass(){ 
+  if(this.pinPass == this.pinUser){ 
+    this.logado(this.idMembro);
+  }else{
+    console.log("err")
+  }
+}
+
+pegaPin(pin: string, id:string){ 
+this.pinUser = pin;
+this.idMembro = id;
+
+console.log(pin)
+}
 
 
 
