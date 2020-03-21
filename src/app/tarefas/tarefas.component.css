@@ -41,3 +41,7 @@ h3{
     line-height: 56px;
 }
 
+.scroll {
+    max-height: 100px;
+    overflow-y: auto;
+}
