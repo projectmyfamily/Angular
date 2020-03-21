@@ -1,4 +1,3 @@
-import { HomeComponent } from './home/home.component';
 import { Component } from '@angular/core';
 
 
@@ -9,7 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
 
   constructor(){
   
