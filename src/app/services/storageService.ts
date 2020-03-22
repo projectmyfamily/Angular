@@ -66,7 +66,7 @@ export class StorageService{
             return JSON.parse(usr)
         }
     }
-    setAny(obj: LocalUser){ 
+    setAny(obj: boolean){ 
         if(obj == null){
             localStorage.removeItem(StorageKeys.anyInfo)
         }else{

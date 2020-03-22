@@ -18,7 +18,8 @@
     <div class="card-body">
 
       <form class="form">
-
+        <p class="text-danger">{{err}}</p>
+        <p class="text-danger">{{validMsg}}</p>
         <div class="form-group ">
           <input type="text" name="nome" class="form-control text-center" [(ngModel)]="cad.nome" required
             placeholder="Nome da família">
@@ -35,10 +36,13 @@
         </div>
 
         <div class="form-group ">
-          <input type="password" class="form-control text-center" name="senha" [(ngModel)]="cad.senha" required
+          <input type="password" (keyup)="validPass()" class="form-control text-center" name="senha" [(ngModel)]="cad.senha" required
             placeholder="Senha">
         </div>
-
+        <div class="form-group ">
+          <input type="password" (keyup)="validPass()" class="form-control text-center" name="senha2" [(ngModel)]="cad.senha2" required
+            placeholder="Confrime a Senha">
+        </div>
       </form>
 
       <div class="form-check box">

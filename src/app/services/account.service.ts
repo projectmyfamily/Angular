@@ -1,3 +1,4 @@
+import { TarefasCadastrar } from './../model/tarefas.cadastrar';
 import { Observable } from 'rxjs';
 import { AccountDTO } from './../model/accountDTO';
 import { StorageService } from './storageService';
@@ -58,7 +59,24 @@ export class AccountService {
     }
 
 
+    deleteMembros(id: string):Observable<void>{ 
+        return this.http.delete<void>(`${API_CONFIG.baseUrl}/membros/${id}`)
 
+    }
+
+
+    inserttarefas(cad: TarefasCadastrar, id: string){ 
+        return this.http.post(
+            `${API_CONFIG.baseUrl}/tarefas/membros/${id}`, 
+        cad, 
+        {
+            observe: 'response',
+            responseType: 'text'
+        }
+    );
 
   
+}
+
+
 }

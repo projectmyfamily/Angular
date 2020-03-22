@@ -38,6 +38,10 @@ export class LogadoComponent implements OnInit {
       this.router.navigate(["/"])
 
     }
+    if(this.storage.getAny() == true){ 
+      location.reload()
+      this.storage.setAny(null)
+    }
 
 
   }
@@ -55,6 +59,7 @@ export class LogadoComponent implements OnInit {
           this.membro.parentesco = this.membros[this.userId].parentesco
           this.membro.pontos = this.membros[this.userId].pontuacao
           this.storage.setArrayMember(this.userId)
+          console.log(this.membro)
         },
           error => {
             if (error.status == 403) {

@@ -18,9 +18,13 @@ export class CadastroComponent implements OnInit {
 cad: Cadastrar = { 
 nome: "",
 email: "",
-senha: ""
+senha: "", 
+senha2: ""
 }
 
+err = ""
+validForms: boolean = false
+validMsg = ""
 
 
 
@@ -34,22 +38,40 @@ senha: ""
 
   ngOnInit() {
     this.cad.email = this.storage.getAny()
+
+    
    
   }
 
 
 
   cadastro(){ 
-    this.account.insert(this.cad)
-    .subscribe(response =>{ 
-      console.log("Cadastrado com sucesso")
-      
-    }), error =>{ 
-      console.log (error)
+    if(this.cad.nome && this.cad.email && this.cad.senha && this.cad.senha2 != null){ 
+      this.validForms = true
     }
+    if(this.validForms == true){
+      this.account.insert(this.cad)
+      .subscribe(response =>{ 
+        console.log("Cadastrado com sucesso")
+        
+      }), error =>{ 
+        console.log (error)
+      }
+    }else{ 
+      this.validMsg = "O formulário contêm erros, por favor verifique!"
+    }
+  
+
+
 
   }
 
- 
-
+  
+  validPass(){ 
+    if(this.cad.senha != this.cad.senha2){
+      this.err = "As senhas são diferentes";
+  }else{ 
+    this.err = ""
+  }
+  }
 }
