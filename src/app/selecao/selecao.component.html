@@ -18,8 +18,8 @@
                     </div>
 
                     <div class="form-group col-md-9 ">
-                        <input type="text" name="nome" maxlength="10" minlength="4" [(ngModel)]="cad.nome" class="form-control" required
-                            placeholder="Nome">
+                        <input type="text" name="nome" maxlength="10" minlength="4" [(ngModel)]="cad.nome"
+                            class="form-control" required placeholder="Nome">
                     </div>
                     <div class="form-group col-md-9 ">
                         <input type="text" class="form-control" name="parentesco" [(ngModel)]="cad.parentesco" required
@@ -38,7 +38,7 @@
                         <input type="password" class="form-control" name="pin" [(ngModel)]="cad.pin" required
                             placeholder="PIN">
                     </div>
-                  
+
                 </form>
             </div>
 
@@ -72,7 +72,8 @@
 
         <div class="row justify-content-md-center">
             <a *ngFor="let membros of membros" class="btn btn-custom">
-                <p data-toggle="modal" (click)="pegaPin(membros.pin, membros.id)" data-target="#exampleModal"  id="nome">{{membros.nome}}</p>
+                <p data-toggle="modal" (click)="pegaPin(membros.pin, membros.id)" data-target="#exampleModal" id="nome">
+                    {{membros.nome}}</p>
                 <i (click)="deletar(membros.id)" type="submit" class="btn material-icons">
                     highlight_off
                 </i>
@@ -91,28 +92,30 @@
 
 
 
-<!-- Modal perfil-->
+    <!-- Modal perfil-->
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-            <form class="col-12 form ">
-                
-                <div class="form-group col-md-9">
-                    <p class="text-dark">Digite seu pin</p>
-                    <input type="password" name="pinPass" [(ngModel)]="pinPass" >
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Digite seu PIN</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-          
-            </form>
+                <input type="password" name="pinPass" class="col-md-6 col-12" [(ngModel)]="pinPass">
+
+                <div class="modal-footer">
+                    <button type="button" (click)="pass(membros.pin, membros.id)" class="btnVerde">Acessar</button>
+                </div>
+
+            </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" (click)="pass(membros.pin, membros.id)" class="btn btn-primary">Acessar</button>
-        </div>
-      </div>
     </div>
-  </div>
+
 
 
 
@@ -121,11 +124,8 @@
 
 
 
-<!-- <form action=""> -->
-<!-- <input type="file" name="foto" (change) = selectFile($event)> -->
-<!-- </form> -->
+<!-- <form action=""> 
+ <input type="file" name="foto" (change) = selectFile($event)> 
+ </form> 
 
-<img [src]="base64textString" alt=""> -->
-
-
-
+ <img [src]="base64textString" alt="">  -->

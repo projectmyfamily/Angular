@@ -39,7 +39,7 @@
         border-style: solid;
       }
     .form{
-        margin-left: 10%;
+        
         margin-top: 30px;
     }
     h5{
@@ -50,5 +50,8 @@
     font-size: 38px;
     line-height: 47px;
     color: #4A5248;
+    }
+    input{
+        margin-left:25%;
     }
     
