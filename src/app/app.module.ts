@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { LogadoComponent } from './logado/logado.component';
 import { TarefasComponent } from './tarefas/tarefas.component';
 import { DesejosComponent } from './desejos/desejos.component';
-import { ConvidarComponent } from './convidar/convidar.component';
+
 import { MembrosComponent } from './membros/membros.component';
 import { MenuComponent } from './menu/menu.component';
 import { AtividadesComponent } from './atividades/atividades.component';
@@ -32,7 +32,6 @@ import { MembrosService } from './services/membros.service';
     LogadoComponent,
     TarefasComponent,
     DesejosComponent,
-    ConvidarComponent,
     MembrosComponent,
     MenuComponent,
     AtividadesComponent,
