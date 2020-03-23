@@ -1,24 +1,26 @@
 <app-menu></app-menu>
-<body class="main">
-     <div class="col-md-12 col-12">
-          <table class="table">
-               <tr > 
-                    <th>Nome</th>
-                    <th>Idade</th>
-                    <th>Sexo</th>
-                    <th>Parentesco</th>
-                    <th>Pontuação</th>
 
-               </tr>
-               <tr *ngFor = " let membros of membros">
-                    <td>{{membros.nome}}</td>
-                    <td>{{membros.nascimento}}</td>
-                    <td>{{membros.sexo}}</td>
-                    <td>{{membros.parentesco}}</td>
-                    <td>{{membros.pontuacao}}</td>
-                 
-               </tr>
-          </table>
+<body class="main">
+     <div class="card col-md-6">
+          <div class="card-body">
+               <table class="table table-hover">
+                    <tr>
+                         <th>Nome</th>
+                         <th>Idade</th>
+                         <th>Sexo</th>
+                         <th>Parentesco</th>
+                         <th>Pontuação</th>
+
+                    </tr>
+                    <tr *ngFor=" let membros of membros">
+                         <td>{{membros.nome}}</td>
+                         <td>{{membros.nascimento}}</td>
+                         <td>{{membros.sexo}}</td>
+                         <td>{{membros.parentesco}}</td>
+                         <td>{{membros.pontuacao}}</td>
+
+                    </tr>
+               </table>
+          </div>
      </div>
-     
 </body>

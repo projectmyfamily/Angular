@@ -9,12 +9,12 @@
       <form class="form-row">
         <div class="col-md-6 col-12">
           <div class="form-group ">
-            <input type="text" name="nome" [(ngModel)]="cad.nome" class="form-control " placeholder="Tarefa">
+            <input type="text" name="nome" [(ngModel)]="cad.nome" class="form-control "  required placeholder="Tarefa">
           </div>
           <div class="form-group ">
-            <input type="date" class="form-control " placeholder="Data">
+            <input type="date" class="form-control " required placeholder="Data">
           </div>
-          <div class="form-group ">
+          <div class="form-group membros">
             <select class="form-control">
               <option>Membros</option>
               <option (click)="pegandoId(membros.id)" *ngFor="let membros of membros">{{membros.nome}}</option>
@@ -24,11 +24,11 @@
 
         <div class="col-md-6 col-12">
           <div class="form-group">
-            <input type="number" name="nome" class="form-control " placeholder="Pontuação">
+            <input type="number" name="nome" class="form-control " required placeholder="Pontuação">
           </div>
 
           <div class="form-group">
-            <input type="number" name="nome" class="form-control " placeholder="Dificuldade">
+            <input type="number" name="nome" class="form-control " required placeholder="Dificuldade">
           </div>
 
         </div>

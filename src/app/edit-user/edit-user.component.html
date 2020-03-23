@@ -15,7 +15,14 @@
                     <input type="text" maxlength="10" minlength="4" class="form-control" required placeholder="Nome">
                 </div>
                 <div class="form-group col-md-7">
-                    <input type="text" class="form-control"required placeholder="Parentesco">
+                    <select class="form-control">
+                        <option>Parentesco</option>
+                        <option>Pai</option>
+                        <option>Mãe</option>
+                        <option>Filho(a)</option>
+                        <option>Avô</option>
+                        <option>Avó</option>
+                    </select>
                 </div>
                 <div class="form-group col-md-7">
                     <input type="date" class="form-control" required placeholder="Idade">
@@ -30,7 +37,7 @@
                 </div>
 
                 <div class="form-group col-md-7">
-                    <input type="password" class="form-control" required placeholder="PIN">
+                    <input type="password" maxlength="8" class="form-control" required placeholder="PIN">
                 </div>
                 <div class="form-group col-md-7 ">
                     <button class="nav-link editar ">Editar</button>
