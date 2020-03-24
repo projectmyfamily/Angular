@@ -1,0 +1,38 @@
+h3{
+    margin-top: 50px;
+    text-align: center; 
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 47px;
+    color: #4A5248;
+    }
+    .form{
+        display: inline-block;
+         margin-left: 20%;
+        }
+        .card{
+            position: fixed;
+            margin-top: 30px;
+            text-align: center;
+            height: auto;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.27);
+            box-sizing: border-box;
+            box-shadow: 0px 4px 17px #4A5248;
+            border-radius: 10px;
+            }
+            .editar{
+                margin-left: 28%;
+                width: 50%;
+                height: 55px;
+                background: #4A5248;
+                border-radius: 14px;
+                color: #93E059;
+                font-family: Quicksand;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 29px;
+                line-height: 36px;
+            }
