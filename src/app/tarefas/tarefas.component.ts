@@ -21,7 +21,8 @@ export class TarefasComponent implements OnInit {
     nome: "",
     nascimento: "",
     parentesco: "",
-    pontos: ""
+    pontos: "",
+    tipo: ""
   }
 
   cad: TarefasDTO = { 
@@ -33,6 +34,8 @@ tarefas: any = ""
 
 tarefasIncompletas: any = []
 tarefasCompletas: any = []
+tipoPerfil = this.storage.getLocalMember().tipo
+tipo = "RESPONSAVEL"
 
   constructor(
     public storage: StorageService,
@@ -64,9 +67,7 @@ for(let x =0; x<this.tarefas.length; x++){
 
 }
 
-
-
-  
+  console.log(this.tipoPerfil)
   }
 
 

@@ -19,17 +19,19 @@ membros: any = [];
 user: any
 cad: MembrosCadastrar = { 
   foto: "",
-  nome: "",
+  nome: "Teste",
   parentesco: "", 
   sexo: "", 
   nascimento: "",
   pin: "",
-
+  tipo: 1
 }
 
 pinPass = "";
 pinUser = "";
 idMembro = "";
+err: any;
+respon: boolean = false
 
   constructor(
     public storage: StorageService,
@@ -69,14 +71,23 @@ loadUser(){
 }
 
 cadastro(){ 
-
+if(this.cad.parentesco != "" && this.cad.sexo != ""){ 
+  if(this.respon == true){ 
+    this.cad.tipo = 0
+    console.log(this.cad.tipo)
+  }else{ 
+    console.log(this.cad.tipo)
+  }
   this.account.insertMembros(this.cad, this.user)
   .subscribe(response =>{ 
     location.reload();
   }), error =>{ 
     console.log (error)
   }
-
+  this.err = "";
+}else{ 
+  this.err = "Existem campos não selecionados"
+}
 }
 
   selectFile(event) {

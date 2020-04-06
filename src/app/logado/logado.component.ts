@@ -20,7 +20,8 @@ export class LogadoComponent implements OnInit {
     nome: "",
     nascimento: "",
     parentesco: "",
-    pontos: ""
+    pontos: "",
+    tipo: ""
   }
 
   constructor(
@@ -58,6 +59,7 @@ export class LogadoComponent implements OnInit {
           this.membro.nascimento = this.membros[this.userId].nascimento
           this.membro.parentesco = this.membros[this.userId].parentesco
           this.membro.pontos = this.membros[this.userId].pontuacao
+          this.membro.tipo = this.membros[this.userId].tipo
           this.storage.setArrayMember(this.userId)
           console.log(this.membro)
         },

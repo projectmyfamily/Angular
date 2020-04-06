@@ -3,10 +3,10 @@
 <body class="main">
 
   <div class="container mx-auto">
-    <h3>Adicionar tarefas</h3>
-    <hr>
     <div>
-      <form class="form-row">
+      <form class="form-row" *ngIf="tipoPerfil == tipo">
+        <h3>Adicionar tarefas</h3>
+        <hr>
         <div class="col-md-6 col-12">
           <div class="form-group ">
             <input type="text" name="nome" [(ngModel)]="cad.nome" class="form-control "  required placeholder="Tarefa">
@@ -39,43 +39,73 @@
 
         <hr>
 
-        <div class="form-group col-md-11 col-12">
-          <h3>Tarefas</h3>
-        </div>
-
-        <hr>
-        <div class="card col-md-3 col-12">
-          <div class="form-group">
-            <h5>Tarefas</h5>
-            <hr class="mx-auto">
-            <div class="scroll">
-              <p class="text-center" *ngFor="let t of tarefas">{{t.nome}}</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card col-md-3 col-12">
-          <div class="form-group">
-            <h5>Incompletas</h5>
-            <hr class="mx-auto">
-            <div class="scroll">
-              <p class="text-center" *ngFor="let t of tarefasIncompletas">{{t.nome}}</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card col-md-3 col-12">
-          <div class="form-group">
-            <h5>Concluído</h5>
-            <hr class="mx-auto">
-            <div class="scroll">
-              <p class="text-center" *ngFor="let t of tarefasCompletas">{{t.nome}}</p>
-            </div>
-          </div>
-        </div>
-
       </form>
+      <div class="form-group col-md-11 col-12">
+        <h3>Tarefas</h3>
+      </div>
 
+      <hr>
+      <div class="card col-md-11 col-12">
+        <div class="form-group">
+          <h5>Tarefas</h5>
+          <hr class="mx-auto">
+          <div class="scroll">
+            <table class="table table-hover">
+              <tr>
+                   <th>Nome</th>
+                   <th>Pontuacao</th>
+                   <th>Data Inicial</th>
+                   <th>Dificuldade</th>
+
+              </tr>
+              <tr *ngFor="let t of tarefas">>
+                   <td>{{t.nome}}</td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+
+              </tr>
+         </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="card col-md-11 col-12">
+        <div class="form-group">
+          <h5>Incompletas</h5>
+          <hr class="mx-auto">
+          <div class="scroll">
+            <table class="table table-hover">
+              <tr>
+                   <th>Nome</th>
+                   <th>Pontuacao</th>
+                   <th>Data Inicial</th>
+                   <th>Dificuldade</th>
+
+              </tr>
+              <tr *ngFor="let t of tarefasIncompletas">
+                   <td>{{t.nome}}</td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+
+              </tr>
+         </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="card col-md-11 col-12">
+        <div class="form-group">
+          <h5>Concluído</h5>
+          <hr class="mx-auto">
+          <div class="scroll">
+            <p class="text-center" *ngFor="let t of tarefasCompletas">{{t.nome}}</p>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>

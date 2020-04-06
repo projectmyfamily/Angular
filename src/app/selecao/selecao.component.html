@@ -12,7 +12,7 @@
 
             <div class="modal-body">
                 <form class="col-12 form ">
-
+                   <small class="text-danger text-center">{{err}}</small>
                     <div class="form-group col-md-9">
                         <input type="file" name="foto" [(ngModel)]="cad.foto" (change)=selectFile($event)>
                     </div>
@@ -21,24 +21,41 @@
                         <input type="text" name="nome" maxlength="10" minlength="4" [(ngModel)]="cad.nome"
                             class="form-control" required placeholder="Nome">
                     </div>
-                    <div class="form-group col-md-9 ">
-                        <input type="text" class="form-control" name="parentesco" [(ngModel)]="cad.parentesco" required
-                            placeholder="Parentesco">
+                    <div class="form-group col-md-9 " title="Parentesco">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Parentesco</label>
+                          </div>
+                        <select name="parentesco" [(ngModel)]="cad.parentesco" class="form-control">
+                            <option>Avô/Avó</option>
+                            <option>Pai/Mãe</option>
+                            <option>Tio/Tia</option>
+                            <option>Primo/Prima</option>
+                            <option>Filho/Filha</option>
+                            <option>Esposa/Marido</option>
+                            <option>Outros</option>
+                        </select>
                     </div>
                     <div class="form-group col-md-9 ">
                         <input type="date" class="form-control" name="nascimento" [(ngModel)]="cad.nascimento" required
                             placeholder="Idade">
                     </div>
-                    <div class="form-group col-md-9 ">
-                        <input type="text" class="form-control" name="sexo" [(ngModel)]="cad.sexo" required
-                            placeholder="Sexo">
+                    <div class="form-group col-md-9 " title="Sexo">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Sexo</label>
+                          </div>
+                        <select name="sexo" [(ngModel)]="cad.sexo" class="form-control">
+                            <option>Masculino</option>
+                            <option>Feminino</option>
+                            <option>Outros</option>
+                        </select>
                     </div>
-
                     <div class="form-group col-md-9 ">
                         <input type="password" class="form-control" name="pin" [(ngModel)]="cad.pin" required
                             placeholder="PIN">
                     </div>
-
+                    <div class="form-group col-md-9 "title="Diga se esse perfil é um perfil de um responsável pela família">
+                        <input name="respon" [(ngModel)]="respon" type="checkbox" aria-label="Checkbox for following text input"> Responsável
+                    </div>
                 </form>
             </div>
 

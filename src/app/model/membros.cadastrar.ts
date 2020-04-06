@@ -7,4 +7,5 @@ export interface MembrosCadastrar{
     nascimento: string,
     pin: string,
     sexo: string,
+    tipo: number
 }
