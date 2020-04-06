@@ -1,0 +1,48 @@
+<app-menu></app-menu>
+
+<body class="main">
+
+    <div class="card col-md-6">
+        <h3>Editar Perfil</h3>
+        <div class="card-body">
+            <form class="form container">
+
+                <div class="form-group col-md-7">
+                    <input type="file" (change)=selectFile($event)>
+                </div>
+
+                <div class="form-group col-md-7">
+                    <input type="text" maxlength="10" minlength="4" class="form-control" required placeholder="Nome">
+                </div>
+                <div class="form-group col-md-7">
+                    <select class="form-control">
+                        <option>Parentesco</option>
+                        <option>Pai</option>
+                        <option>Mãe</option>
+                        <option>Filho(a)</option>
+                        <option>Avô</option>
+                        <option>Avó</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-7">
+                    <input type="date" class="form-control" required placeholder="Idade">
+                </div>
+                <div class="form-group col-md-7">
+                    <select class="form-control">
+                        <option>Sexo</option>
+                        <option>Feminino</option>
+                        <option>Masculino</option>
+                        <option>Prefiro não dizer</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-7">
+                    <input type="password" maxlength="8" class="form-control" required placeholder="PIN">
+                </div>
+                <div class="form-group col-md-7 ">
+                    <button class="nav-link editar ">Editar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

@@ -21,6 +21,7 @@ import { FormsModule }    from '@angular/forms';
 import { SelecaoComponent } from './selecao/selecao.component';
 import { RetornoBanco } from './services/retorno.banco';
 import { MembrosService } from './services/membros.service';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { MembrosService } from './services/membros.service';
     MembrosComponent,
     MenuComponent,
     AtividadesComponent,
-    SelecaoComponent
+    SelecaoComponent,
+    EditUserComponent
     
     
   

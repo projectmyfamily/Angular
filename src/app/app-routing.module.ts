@@ -9,6 +9,7 @@ import { TarefasComponent } from './tarefas/tarefas.component';
 import { MembrosComponent } from './membros/membros.component';
 import { AtividadesComponent } from './atividades/atividades.component';
 import { SelecaoComponent } from './selecao/selecao.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'desejos', component: DesejosComponent},
   {path: 'tarefas', component: TarefasComponent},
   {path: 'membros', component: MembrosComponent},
+  {path: 'EditUser', component: EditUserComponent},
   {path: 'atividades', component: AtividadesComponent},
   {path: 'selecao', component: SelecaoComponent},
   {path:  'logado/:id', component: LogadoComponent},
