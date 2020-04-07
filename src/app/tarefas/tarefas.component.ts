@@ -30,7 +30,8 @@ export class TarefasComponent implements OnInit {
     nome: "",
     status: false, 
     nivel: "",
-    pontuacao: ""
+    pontuacao: "", 
+    designar: ""
   }
 
 
@@ -100,7 +101,7 @@ this.msg = "";
   }
 
 
-
+this.cad.designar = this.storage.getLocalMember().nome;
 
         },
           error => {
@@ -115,6 +116,7 @@ this.msg = "";
   }
 
 cadastrar(id: string){ 
+  console.log(this.cad.designar)
   this.account.inserttarefas(this.cad, this.buscaMembros()).subscribe(response =>{ 
     console.log(response)
     this.loadUser()

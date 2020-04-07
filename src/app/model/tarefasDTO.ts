@@ -3,6 +3,7 @@ export interface TarefasDTO{
     nome: string, 
     pontuacao: string,
     status: boolean,
-    nivel: string
+    nivel: string,
+    designar: string
     
 }
