@@ -27,15 +27,22 @@ export class TarefasComponent implements OnInit {
 
   cad: TarefasDTO = { 
     id: "",
-    nome: ""
+    nome: "",
+    status: false, 
+    nivel: "",
+    pontuacao: ""
   }
 
+
+msg  = ""
 tarefas: any = ""
 
 tarefasIncompletas: any = []
 tarefasCompletas: any = []
 tipoPerfil = this.storage.getLocalMember().tipo
 tipo = "RESPONSAVEL"
+
+membrosComum = [];
 
   constructor(
     public storage: StorageService,
@@ -68,6 +75,9 @@ for(let x =0; x<this.tarefas.length; x++){
 }
 
   console.log(this.tipoPerfil)
+
+this.msg = "";
+
   }
 
 
@@ -80,6 +90,18 @@ for(let x =0; x<this.tarefas.length; x++){
           this.membros = this.ac.membros
          this.storage.setLocalMember(this.membros[this.storage.getArrayMember()])
           console.log(this.membros)
+          
+//for para  membros comuns
+  for(let y = 0; y<this.membros.length;y++){ 
+    if(this.membros[y].tipo != this.tipo){ 
+      this.membrosComum.push(this.membros[y]);
+      console.log(this.membros[y].nome+" Foi adicionado")
+    }
+  }
+
+
+
+
         },
           error => {
             if (error.status == 403) {
@@ -97,7 +119,7 @@ cadastrar(id: string){
     console.log(response)
     this.loadUser()
     location.reload()
-
+    this.msg = "Tarefa Cadastrada"
 
   }); error => { 
     console.log(error)
@@ -112,6 +134,21 @@ buscaMembros(){
   return this.membros[index].id
 
 }
+
+
+
+concluir(id){ 
+  var index = this.tarefasIncompletas.map(function(element) {
+    return element.id
+  }).indexOf(id)
+  this.tarefasCompletas.push(this.tarefasIncompletas[index])
+  this.tarefasIncompletas.splice(index);
+
+  
+}
+
+
+
 
 }
  
