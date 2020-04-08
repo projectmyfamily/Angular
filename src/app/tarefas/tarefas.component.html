@@ -6,20 +6,23 @@
     <div>
       <form class="form-row" *ngIf="tipoPerfil == tipo">
         <h3>Adicionar tarefas</h3>
+        
         <hr>
         <p class="text-success">{{msg}}</p>
-        <div class="col-md-6 col-12">
+        <div class="col-md-12 col-12">
           <div class="form-group ">
             <input type="text" name="nome" [(ngModel)]="cad.nome" class="form-control "  required placeholder="Nome da Tarefa">
           </div>
-          <div class="form-group ">
+          <!-- <div class="form-group ">
             <input type="date" class="form-control " required placeholder="Data">
+          </div> -->
+         
+          <div class="form-group">
+             <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Membro: </label>
           </div>
-          <div class="form-group membros">
-            <div class="input-group-prepend">
-              <label class="input-group-text" for="inputGroupSelect01">Membro: </label>
-            </div>
             <select  name="membroId" [(ngModel)]="membroId" class="form-control">
+              <option>Selecione</option>
                 <option *ngFor="let membros of membrosComum" >
                   <p *ngIf="membros.tipo != tipo" >{{membros.nome}}</p>
                 </option>
@@ -27,7 +30,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-12">
+        <div class="col-md-12 col-12">
           <div class="form-group">
             <input type="number" name="pontuacao" [(ngModel)]="cad.pontuacao" class="form-control " required placeholder="Pontuação">
           </div>
@@ -61,49 +64,26 @@
                      <th>Pontuacao</th>
                      <th>Data Inicial</th>
                      <th>Dificuldade</th>
-                     <th>Concluir</th>
+                     <th >Concluir</th>
                      <th>Excluir</th>
+                     <th>Criada por: </th>
   
                 </tr>
                 <tr class="text-center" *ngFor="let t of tarefas">
-                     <td>{{t.nome}}</td>
-                     <td>{{t.pontuacao}}</td>
-                     <td></td>
-                     <td>{{t.nivel}}</td>
-                     <td><button type="button" (click)="concluir(t.id)" class="btn">Concluir</button></td>
-                     <td><button type="button" class="btn">Excluir</button></td>
-  
+                     <td *ngIf="t.status == false">{{t.nome}}</td>
+                     <td *ngIf="t.status == false">{{t.pontuacao}}</td>
+                     <td *ngIf="t.status == false">{{t.dataInicial}}</td>
+                     <td *ngIf="t.status == false" >{{t.nivel}}</td>
+                     <td *ngIf="t.status == false" ><button type="button" (click)="concluir(t.id, t)" class="btn">Concluir</button></td>
+                     <td *ngIf="t.status == false" ><button type="button" class="btn">Excluir</button></td>
+                     <td *ngIf="t.status == false">{{t.designar}}</td>
                 </tr>
            </table>
             </div>
           </div>
         </div>
   
-        <div class="card col-md-11 col-12">
-          <div class="form-group">
-            <h5>Incompletas</h5>
-            <hr class="mx-auto">
-            <div class="scroll">
-              <table class="table table-hover">
-                <tr>
-                     <th>Nome</th>
-                     <th>Pontuacao</th>
-                     <th>Data Inicial</th>
-                     <th>Dificuldade</th>
-  
-                </tr>
-                <tr *ngFor="let t of tarefasIncompletas">
-                     <td>{{t.nome}}</td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-  
-                </tr>
-           </table>
-            </div>
-          </div>
-        </div>
+      
   
         <div class="card col-md-11 col-12">
           <div class="form-group">
@@ -117,14 +97,16 @@
                      <th>Data Inicial</th>
                      <th>Data Conclusão</th>
                      <th>Dificuldade</th>
+                     <th>Criada por:</th>
   
                 </tr>
                 <tr *ngFor="let t of tarefasCompletas">
                      <td>{{t.nome}}</td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
+                     <td>{{t.pontuacao}}</td>
+                     <td>{{t.dataInicial}}</td>
+                     <td>{{t.dataFinal}}</td>
+                     <td>{{t.nivel}}</td>
+                     <td>{{t.designar}}</td>
   
                 </tr>
            </table>

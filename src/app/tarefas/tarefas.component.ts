@@ -1,3 +1,6 @@
+import { Points } from './../model/points';
+import { TarefasUpdate } from './../model/tarefasUpdate';
+import { Subscribe } from './../services/subscribe';
 import { TarefasCadastrar } from './../model/tarefas.cadastrar';
 import { TarefasDTO } from './../model/tarefasDTO';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -12,6 +15,9 @@ import { AccountDTO } from './../model/accountDTO';
   styleUrls: ['./tarefas.component.css']
 })
 export class TarefasComponent implements OnInit {
+
+  data = new Date().toLocaleString()
+  
   membros: any = []
   ac: AccountDTO
   userId: any
@@ -31,7 +37,8 @@ export class TarefasComponent implements OnInit {
     status: false, 
     nivel: "",
     pontuacao: "", 
-    designar: ""
+    designar: "",
+    dataInicial: this.data
   }
 
 
@@ -44,6 +51,20 @@ tipoPerfil = this.storage.getLocalMember().tipo
 tipo = "RESPONSAVEL"
 
 membrosComum = [];
+
+
+
+cadUpdate: TarefasUpdate = { 
+  status: true,
+  dataFinal: this.data
+}
+
+points: Points = { 
+  pontuacao: null
+}
+
+
+
 
   constructor(
     public storage: StorageService,
@@ -67,7 +88,9 @@ membrosComum = [];
 for(let x =0; x<this.tarefas.length; x++){ 
     if(this.tarefas[x].status == false ){ 
       this.tarefasIncompletas.push(this.tarefas[x])
+     
     }else{ 
+  
       this.tarefasCompletas.push(this.tarefas[x])
     }
 
@@ -78,6 +101,9 @@ for(let x =0; x<this.tarefas.length; x++){
   console.log(this.tipoPerfil)
 
 this.msg = "";
+
+
+
 
   }
 
@@ -96,7 +122,6 @@ this.msg = "";
   for(let y = 0; y<this.membros.length;y++){ 
     if(this.membros[y].tipo != this.tipo){ 
       this.membrosComum.push(this.membros[y]);
-      console.log(this.membros[y].nome+" Foi adicionado")
     }
   }
 
@@ -116,6 +141,8 @@ this.cad.designar = this.storage.getLocalMember().nome;
   }
 
 cadastrar(id: string){ 
+
+
   console.log(this.cad.designar)
   this.account.inserttarefas(this.cad, this.buscaMembros()).subscribe(response =>{ 
     console.log(response)
@@ -133,24 +160,41 @@ buscaMembros(){
   var index = this.membros.map(function(element) {
     return element.nome
   }).indexOf(this.membroId)
+  console.log(index)
   return this.membros[index].id
 
+
 }
 
 
 
-concluir(id){ 
-  var index = this.tarefasIncompletas.map(function(element) {
-    return element.id
-  }).indexOf(id)
-  this.tarefasCompletas.push(this.tarefasIncompletas[index])
-  this.tarefasIncompletas.splice(index);
+// concluir(id){ 
+//   var index = this.tarefasIncompletas.map(function(element) {
+//     return element.id
+//   }).indexOf(id)
+//   this.tarefasCompletas.push(this.tarefasIncompletas[index])
+//   this.tarefasIncompletas.splice(index);
 
   
+// }
+
+concluir(id: string, t: TarefasDTO){ 
+  this.addpoints(t);
+  this.account.updateTarefas(this.cadUpdate, id).subscribe(response => { 
+    this.account.updatePoints(this.points, this.storage.getLocalMember().id).subscribe(resp =>{ 
+      console.log(resp);
+      this.loadUser();
+      location.reload()
+    })
+  })
+
 }
 
+addpoints(t: TarefasDTO){ 
 
-
+  this.points.pontuacao = t.pontuacao;
+  
+}
 
 }
  

@@ -1,3 +1,5 @@
+import { Points } from './../model/points';
+import { TarefasUpdate } from './../model/tarefasUpdate';
 import { TarefasCadastrar } from './../model/tarefas.cadastrar';
 import { Observable } from 'rxjs';
 import { AccountDTO } from './../model/accountDTO';
@@ -77,6 +79,27 @@ export class AccountService {
 
   
 }
+
+    updateTarefas(cad: TarefasUpdate, id:String){ 
+       return this.http.put(
+            `${API_CONFIG.baseUrl}/tarefas/${id}`,
+            cad, 
+            {
+                observe: 'response',
+                responseType: 'text'
+            }
+        )
+    }
+    updatePoints(points: Points, id: string){ 
+      return  this.http.put(
+            `${API_CONFIG.baseUrl}/membros/points/${id}`,
+            points,
+            {
+                observe: 'response',
+                responseType: 'text'
+            }
+        )
+    }
 
 
 }
