@@ -1,6 +1,7 @@
-import { StorageKeys } from './storagekeys';
+
 import { LocalUser } from './../model/localUser';
 import { Injectable } from "@angular/core";
+import { StorageKeys } from './storageKeys';
 
 
 @Injectable()
