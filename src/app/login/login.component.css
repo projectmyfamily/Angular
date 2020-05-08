@@ -1,49 +1,35 @@
 body{
-    background: url(src/assets/family.png);
+    background: linear-gradient(180deg, #FAFF03 0%, #FFFFFF 99.54%);
     background-size:cover;
     background-position: center;
     padding-top: 30px;
     width: 100%;
     position: absolute;
 }
-h3{
+a{
     margin-top: 20px;
-    color: #93E059;
     text-align: center; 
-    font-family: Quicksand; 
-    font-style: normal;
-font-weight: bold;
-font-size: 45px;
-line-height: 56px;
+    color:#FAFF03;
 }
-h5{
-    margin-top: 20px;
-    color: #93E059;
-    text-align: center; 
-    font-family: Quicksand; 
-    font-style: normal;
-font-weight: normal;
-font-size: 35px;
-line-height: 44px;
-}
+
 .card{
 width: 50%;
 height: 625px;
-background: rgba(74, 82, 72, 0.8);
-border-radius: 14px; 
-
-
+background: #515151;
 }
-.nova{
-    color:white; 
-    text-align: center;
+.card2{
+margin-top: 1%;
+width: 50%;
+height: 50px;
+background: #515151;
 }
-.ajuda{
-    color:white; 
+hr{
+    background: #FAFF03;
+    width: 10%;
+}
+p{
+    color:#FAFF03;
+    text-align: center; 
     
-}
-.form{
-    
-    margin-top: 20px;
 }
 
