@@ -15,6 +15,7 @@ export class TarefasComponent implements OnInit {
   membros: any = []
   ac: AccountDTO
   userId: any
+  membroId: any
 
   membro = {
     nome: "",
@@ -77,7 +78,7 @@ for(let x =0; x<this.tarefas.length; x++){
           this.ac = response as AccountDTO;
           this.membros = this.ac.membros
          this.storage.setLocalMember(this.membros[this.storage.getArrayMember()])
-          console.log(this.tarefas)
+          console.log(this.membros)
         },
           error => {
             if (error.status == 403) {
@@ -91,7 +92,7 @@ for(let x =0; x<this.tarefas.length; x++){
   }
 
 cadastrar(id: string){ 
-  this.account.inserttarefas(this.cad, this.storage.getLocalMember().id).subscribe(response =>{ 
+  this.account.inserttarefas(this.cad, this.buscaMembros()).subscribe(response =>{ 
     console.log(response)
     this.loadUser()
     location.reload()
@@ -103,6 +104,13 @@ cadastrar(id: string){
 }
 
 
-
+buscaMembros(){
+  var index = this.membros.map(function(element) {
+    return element.nome
+  }).indexOf(this.membroId)
+  return this.membros[index].id
 
 }
+
+}
+ 
