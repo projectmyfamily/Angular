@@ -5,7 +5,7 @@
         <img src="assets\logo.png" alt="">
       </a>
       <div class="card-body">
-        <form class="form-row form justify-content-md-center">
+        <form class="form-row justify-content-md-center">
           <p class="text-light">{{err}}</p>
           <div class="form-group col-md-10 col-12">
             <input type="email" class="form-control" name="email" [(ngModel)]="creds.email" required="true"
@@ -43,6 +43,24 @@
     <div class="card card2 col-12 mx-auto">
       <p style="margin-top: 10px;">Sua família ainda não é cadastrada? <a routerLink="/cadastro">Cadastre-se</a></p>
     </div>
+
+    <p style="color:#515151;">
+      Baixe já o aplicativo
+    </p>
+
+    <form class="form-row justify-content-md-center">
+      <div >
+        <a>
+          <img src="assets\appstore.png" alt="">
+        </a>
+      </div>
+
+      <div >
+        <a>
+          <img src="assets\googleplay.png" alt="">
+        </a>
+      </div>
+    </form>
 
   </section>
 

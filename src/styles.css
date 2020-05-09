@@ -18,15 +18,10 @@ body { font-family: Roboto, "Helvetica Neue", sans-serif; }
         color: #515151;
 }
 .btnCinza{
-margin-left: 300px;
-width: 279px;
-height: 58px;
-background: #4A5248;
-border-radius: 25px;
-color: #93E059;
-font-family: Quicksand;
-font-style: normal;
-font-weight: bold;
-font-size: 29px;
-line-height: 36px;
+    width: 550px;
+    height: 60px;
+    background: #515151;
+    border-radius: 6px;
+    color: #FAFF03;
+    margin-left: 8%;
 }

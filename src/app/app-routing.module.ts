@@ -7,9 +7,11 @@ import { LogadoComponent } from './logado/logado.component';
 import { DesejosComponent } from './desejos/desejos.component';
 import { TarefasComponent } from './tarefas/tarefas.component';
 import { MembrosComponent } from './membros/membros.component';
-import { AtividadesComponent } from './atividades/atividades.component';
 import { SelecaoComponent } from './selecao/selecao.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { CadAdultoComponent } from './cad-adulto/cad-adulto.component';
+import { CadKidsComponent } from './cad-kids/cad-kids.component';
+
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -19,9 +21,9 @@ const routes: Routes = [
   {path: 'tarefas', component: TarefasComponent},
   {path: 'membros', component: MembrosComponent},
   {path: 'EditUser', component: EditUserComponent},
-  {path: 'atividades', component: AtividadesComponent},
   {path: 'selecao', component: SelecaoComponent},
-  {path:  'logado/:id', component: LogadoComponent},
+  {path: 'cadAdulto', component: CadAdultoComponent},  
+  {path: 'cadKids', component: CadKidsComponent}, 
   {path: '', component: HomeComponent }
 ];
 
