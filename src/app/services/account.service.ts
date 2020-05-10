@@ -9,6 +9,7 @@ import { Cadastrar } from './../model/cadastrar';
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { MembrosCadastrar } from '../model/membros.cadastrar';
+import { ImageUtilService } from './image-util-service';
 
 
 
@@ -18,7 +19,8 @@ export class AccountService {
 
     constructor(
         public http: HttpClient, 
-        public storage: StorageService) {
+        public storage: StorageService,
+        public imageUtilService: ImageUtilService,) {
     }
 
     findById(id: string) {
@@ -100,6 +102,21 @@ export class AccountService {
             }
         )
     }
+
+    uploadPicture(picture, id){ 
+        let pictureBlob = this.imageUtilService.dataUriToBlob(picture)
+        let formData: FormData = new  FormData();
+        formData.set('file', pictureBlob, `file${id}.jpeg`)
+        return this.http.post(
+            `${API_CONFIG.baseUrl}/membros/picture`,
+            formData,
+            { 
+                observe: 'response',
+                responseType: 'text'
+            }
+           
+        );
+        }
 
 
 }

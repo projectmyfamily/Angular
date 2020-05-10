@@ -56,11 +56,15 @@
                     <div class="form-group col-md-9 "title="Diga se esse perfil é um perfil de um responsável pela família">
                         <input name="respon" [(ngModel)]="respon" type="checkbox" aria-label="Checkbox for following text input"> Responsável
                     </div>
+                    <input type="file"
+       id="avatar" name="picture"
+       accept="image/png, image/jpeg" (change)="selectFile($event)" >
                 </form>
+                
             </div>
 
             <div class="modal-footer">
-                <button type="button" (click)="cadastro()" class="btnVerde">Salvar</button>
+                <button type="button" (click)="sendPicture()" class="btnVerde">Salvar</button>
             </div>
 
         </div>

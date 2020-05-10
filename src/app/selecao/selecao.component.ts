@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { StorageService } from '../services/storageService';
 import { AccountService } from '../services/account.service';
 import { MembrosCadastrar } from '../model/membros.cadastrar';
+import { ImageUtilService } from '../services/image-util-service';
 
 
 
@@ -32,11 +33,14 @@ pinUser = "";
 idMembro = "";
 err: any;
 respon: boolean = false
+picture: CanvasImageData
+
 
   constructor(
     public storage: StorageService,
      public account: AccountService,
      public router: Router
+    
      ) { 
 
      }
@@ -156,6 +160,21 @@ this.idMembro = id;
 
 console.log(pin)
 }
+
+
+sendPicture() { 
+  this.account.uploadPicture(this.base64textString).subscribe( 
+    response => { 
+      console.log(response)
+    }
+  )
+
+  
+}
+
+
+
+
 
 
 

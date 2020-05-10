@@ -22,6 +22,7 @@ import { SelecaoComponent } from './selecao/selecao.component';
 import { RetornoBanco } from './services/retorno.banco';
 import { MembrosService } from './services/membros.service';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { ImageUtilService } from './services/image-util-service';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { EditUserComponent } from './edit-user/edit-user.component';
         LogadoComponent, 
         RetornoBanco,
         MembrosService,
-        HttpUrlEncodingCodec
+        HttpUrlEncodingCodec,
+        ImageUtilService
 
   ],
   bootstrap: [AppComponent]
