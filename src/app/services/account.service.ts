@@ -103,10 +103,10 @@ export class AccountService {
         )
     }
 
-    uploadPicture(picture, id){ 
+    uploadPicture(picture){ 
         let pictureBlob = this.imageUtilService.dataUriToBlob(picture)
         let formData: FormData = new  FormData();
-        formData.set('file', pictureBlob, `file${id}.jpeg`)
+        formData.set('file', pictureBlob, `file.jpeg`)
         return this.http.post(
             `${API_CONFIG.baseUrl}/membros/picture`,
             formData,

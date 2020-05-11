@@ -8,29 +8,20 @@ body { font-family: Roboto, "Helvetica Neue", sans-serif; }
 .main2{
     margin-left: 25%;
 }
-.btnVerde{
+.btnAmarelo{
         margin: 10px auto;
-        width: 254px;
-        height: 61px;
-        background: rgba(147, 224, 89, 0.9);
-        border: 1px solid #93E059;
-        box-sizing: border-box;
-        border-radius: 5px;
+        width: 83%;
+        height: 45px;
+        background: #FAFF03;
+        border-radius: 12px;
         font-family: Quicksand;
-        font-style: normal;
-        font-weight: bold;
-        color: white;
+        color: #515151;
 }
 .btnCinza{
-margin-left: 300px;
-width: 279px;
-height: 58px;
-background: #4A5248;
-border-radius: 25px;
-color: #93E059;
-font-family: Quicksand;
-font-style: normal;
-font-weight: bold;
-font-size: 29px;
-line-height: 36px;
+    width: 550px;
+    height: 60px;
+    background: #515151;
+    border-radius: 6px;
+    color: #FAFF03;
+    margin-left: 8%;
 }

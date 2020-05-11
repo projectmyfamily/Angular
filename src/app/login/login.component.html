@@ -1,38 +1,66 @@
 <body>
   <section class="container col-12">
     <div class="card col-12 mx-auto">
-      <br>
-      <h3>My Family</h3>
-      <h5>Entrar</h5>
+      <a>
+        <img src="assets\logo.png" alt="">
+      </a>
       <div class="card-body">
-        <form class="form-row form justify-content-md-center">
+        <form class="form-row justify-content-md-center">
           <p class="text-light">{{err}}</p>
           <div class="form-group col-md-10 col-12">
-            <input type="email" class="form-control" name="email" [(ngModel)]="creds.email" required="true" placeholder="E-mail">
+            <input type="email" class="form-control" name="email" [(ngModel)]="creds.email" required="true"
+              placeholder="login ou e-mail">
           </div>
 
           <div class="form-group col-md-10 col-12">
-            <input type="password" class="form-control" name="senha" [(ngModel)]="creds.senha" required="true" placeholder="Senha">
+            <input type="password" class="form-control" name="senha" [(ngModel)]="creds.senha" required="true"
+              placeholder="Senha">
           </div>
 
-          <div class="form-group col-md-10 col-12 ">
-            <button  (click)="login()" class="nav-link btnVerde col-md-6 col-12 ">Login</button>
+          <div class="form-group col-12 ">
+            <button (click)="login()" class="nav-link btnAmarelo ">Entrar</button>
           </div>
 
-          <div class="form-check col-md-6 col-12 text-center">
-            <input type="checkbox">
-            <label style="color:white;"> Lembre-se de mim</label>
+          <hr class="form-group col-md-5 col-12 ">
+          <p>ou</p>
+          <hr class="form-group col-md-5 col-12 ">
+
+          <div class="form-group col-md-5 col-12 ">
+            <a href="https://www.facebook.com/">
+              <img src="assets\face.svg" alt="">
+            </a>
           </div>
 
-          <div class="form-group col-md-6 col-12 text-center">
-            <a class="ajuda" href="/">Precisa de ajuda?</a>
+          <div class="form-group col-md-5 col-12 ">
+            <a href="https://www.google.com/">
+              <img src="assets\google.svg" alt="">
+            </a>
           </div>
+
         </form>
-        <div class=" col-12 text-center">
-          <a class="nova" routerLink="/cadastro">Família nova? <strong>Cadastre-se agora</strong></a>
-        </div>
       </div>
     </div>
+    <div class="card card2 col-12 mx-auto">
+      <p style="margin-top: 10px;">Sua família ainda não é cadastrada? <a routerLink="/cadastro">Cadastre-se</a></p>
+    </div>
+
+    <p style="color:#515151;">
+      Baixe já o aplicativo
+    </p>
+
+    <form class="form-row justify-content-md-center">
+      <div >
+        <a>
+          <img src="assets\appstore.png" alt="">
+        </a>
+      </div>
+
+      <div >
+        <a>
+          <img src="assets\googleplay.png" alt="">
+        </a>
+      </div>
+    </form>
 
   </section>
 

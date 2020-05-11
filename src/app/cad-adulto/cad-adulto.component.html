@@ -1,0 +1,73 @@
+<body>
+    <nav class="nav-bar header">
+        <div class="row col-12">
+            <div class="col-md-6 col-12">
+                <a class="navbar-toggler myfamily" href="/">
+                    <img src="assets/myfamily.png" alt="" width="25%;">
+                </a>
+            </div>
+
+            <div class="col-md-6 col-12 text-right">
+                <a>
+                    <button class="nav-link botao" routerLink="/login">Sair</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <form>
+        <div class="form-row justify-content-md-center col-12">
+            <h2>Criar conta MyFamily</h2>
+        </div>
+
+        <div class="form-group col-md-10 col-12 text-center">
+            <p>Se você tem uma conta em um dos serviços a seguir, é ainda mais fácil criar uma conta MyFamily.</p>
+        </div>
+
+        <div class="form-group col-md-10 col-12 text-center image">
+            <a href="https://www.facebook.com/">
+                <img src="assets/fac.png" width="40%">
+            </a>
+        </div>
+
+        <div class="row">
+            <hr class="form-group col-md-5 col-12 ">
+            ou
+            <hr class="form-group col-md-5 col-12 ">
+        </div>
+
+    </form>
+
+    <form class="form-group form justify-content-md-center col-12">
+        <div class="form-group col-md-6 col-12">
+            <input type="text" class="form-control" [(ngModel)]="cad.nome" name="cad.nome" required="true" placeholder="Nome da família">
+        </div>
+
+        <div class="form-group col-md-6 col-12">
+            <input type="email" [(ngModel)]="cad.email" name="cad.email" class="form-control" required="true" placeholder="E-mail">
+        </div>
+
+        <div class="form-group col-md-6 col-12">
+            <input type="password" [(ngModel)]="cad.senha" name="cad.senha" class="form-control" required="true" placeholder="Senha">
+        </div>
+        <div class="form-group col-md-6 col-12">
+            <input type="password" [(ngModel)]="cad.senha2" name="cad.senha2" class="form-control" required="true" placeholder="Redigite sua senha">
+        </div>
+        <div class="form-group col-md-6 col-12">
+            <input type="text" class="form-control" required="true" placeholder="Cidade">
+        </div>
+
+        <div class="form-group col-md-6 col-12">
+            <input type="text" class="form-control" required="true" placeholder="Estado">
+        </div>
+
+        <div class="form-group col-md-6 col-12 text-center">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Aceito os termos de privacidade</label>
+        </div>
+
+        <div class="form-group col-md-6 col-12">
+            <button class="nav-link btnCinza" (click)="cadastro()" >Próximo</button>
+        </div>
+    </form>
+</body>
