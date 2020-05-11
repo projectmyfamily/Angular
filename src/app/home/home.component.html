@@ -1,16 +1,18 @@
 <body>
-
-  <div class="container col-12">
-    <div class="row">
-
+  <nav class="nav-bar header">
+    <div class="row col-12">
       <div class="col-md-6 col-12">
-        <a class="navbar-toggler myfamily2" >MyFamily</a>
+        <a class="navbar-toggler myfamily" href="/">
+          <img src="assets/myfamily.png" alt="" width="25%;">
+        </a>
       </div>
 
       <div class="col-md-6 col-12 text-right">
-        <button class=" btnVerde " routerLink="/login">Entrar</button>
+        <button class="nav-link botao" routerLink="/login">Entrar</button>
       </div>
+      
     </div>
+  </nav>
 
 
     <div class="form-group justify-content-md-center col-12">
@@ -18,15 +20,17 @@
         Planeje junto com sua família tudo que a vida pode te proporcionar de bom!
       </p>
 
-      <div class="input-group col-12 ">
-        <input name="email" [(ngModel)]="email"  class="inputEmail col-5 " placeholder="E-mail">
-        <button class="nav-link btn1 " (click)="subscribe()" >Entre para o MyFamily</button>
-      </div>
-
       <div class="col-12 ">
         <p id="paragrafo">Deseja assinar? Informe seu email para criar sua conta.</p>
       </div>
+
+      <div class="form-group col-12 ">
+        <input name="email" [(ngModel)]="email"  class="inputEmail col-md-6" placeholder="E-mail">
+        <button class="nav-link btn " (click)="subscribe()" >Entre para o MyFamily</button>
+      </div>
+
+      
     </div>
-  </div>
+
 
 </body>

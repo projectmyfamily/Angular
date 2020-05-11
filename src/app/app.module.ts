@@ -10,7 +10,6 @@ import { HomeComponent } from './home/home.component';
 import { LogadoComponent } from './logado/logado.component';
 import { TarefasComponent } from './tarefas/tarefas.component';
 import { DesejosComponent } from './desejos/desejos.component';
-import { MembrosComponent } from './membros/membros.component';
 import { Auth } from './services/auth';
 import { StorageService } from './services/storageService';
 import { HttpClientModule, HttpUrlEncodingCodec } from '@angular/common/http';
@@ -21,6 +20,7 @@ import { MembrosService } from './services/membros.service';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { CadAdultoComponent } from './cad-adulto/cad-adulto.component';
 import { CadKidsComponent } from './cad-kids/cad-kids.component';
+import { CadKids2Component } from './cad-kids2/cad-kids2.component';
 
 
 @NgModule({
@@ -32,11 +32,11 @@ import { CadKidsComponent } from './cad-kids/cad-kids.component';
     LogadoComponent,
     TarefasComponent,
     DesejosComponent,
-    MembrosComponent,
     SelecaoComponent,
     EditUserComponent,
     CadAdultoComponent,
-    CadKidsComponent
+    CadKidsComponent,
+    CadKids2Component
     
     
   

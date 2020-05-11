@@ -1,12 +1,12 @@
 body{
-    background-image: url(src/assets/family.png);
+    background: #4A5248;
     background-size: cover;
     width: 100%;
     position: absolute;
     
 }
     .myfamily2{
-    font-family: Quicksand;
+    font-family: Lato;
     font-style: normal;
     font-weight: bold;
     font-size: 38px;
@@ -14,28 +14,34 @@ body{
     color: #4A5248;
     }
     #paragrafo{
-        font-family: Quicksand;
+        font-family: Lato;
     font-style: normal;
     font-weight: 500;
     font-size: 34px;
     line-height: 42px;
-    color: #000000;
+    color: white;
     text-align: center;
     }
 .inputEmail{
-    height: 61px;
-    margin-left: 250px;
+    height: 45px;
+    margin-left: 25%;
 
 }
-.btn1{ 
-        height: 61px;
-        background: rgba(147, 224, 89, 0.9);
-        border: 1px solid #93E059;
-        box-sizing: border-box;
-        border-radius: 5px;
-        font-family: Quicksand;
-        font-style: normal;
-        font-weight: bold;
-        color: white;
+.btn{ 
+    margin: 10px auto;
+    width: 25%;
+    height: 45px;
+    background: #FAFF03;
+    border-radius: 12px;
+    font-family: Lato;
+    color: #515151;
+}
+.botao{
+    width: 25%;
+    height: 50px;
+    background: #FAFF03;
+    border-radius: 49px;
+    margin-left: 80%;
+    margin-top: 10px;
 }
    
