@@ -1,57 +1,29 @@
-.sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-    padding: 48px 0 0;
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-    height: 100%;
-    display: block;
-    transition: all 0.5s ease-in;
-    overflow: auto;
-}
+.botao{
+    width: 80px;
+height: 80px;
+left: 1308px;
+top: 49px;
+border-radius: 150px;
+background: #FAFF03;
 
-.sidebarHide {
-    transition: all 0.5s ease-out;
-    width: 0;
 }
-
-.sidebar a:hover {
-    background-color: rgb(184, 183, 182);
-}
-.circular--square {
-  border-top-left-radius: 50% 50%;
-  border-top-right-radius: 50% 50%;
-  border-bottom-right-radius: 50% 50%;
-  border-bottom-left-radius: 50% 50%;
-}
-.card{
-position: fixed;
-margin-top: 30px;
-text-align: center;
-height: 95%;
-background: #FFFFFF;
-border: 1px solid rgba(0, 0, 0, 0.27);
-box-sizing: border-box;
-box-shadow: 0px 4px 17px #4A5248;
-border-radius: 10px;
-}
-p{
-    margin-left: 30px;
-    font-size: 25px;
-}
-
-a{
-width: 172px;
-height: 50px;
-font-family: Quicksand;
+.menu{
+width: 80px;
+height: 45px;
+font-family: Lato;
 font-style: normal;
-font-weight: bold;
-font-size: 30px;
-line-height: 37px;
-color: #93E059;
+font-weight: normal;
+font-size: 36px;
+line-height: 45px;
+color: #FAFF03;
 }
-img{
-    margin-left: 30%;
+nav{
+    background: #515151;
 }
+.sino{
+    margin-right: 50px;
+}
+/* .perfil{
+    background: #FAFF03;
+    height: 150px;
+} */

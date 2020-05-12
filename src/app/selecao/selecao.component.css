@@ -1,56 +1,22 @@
-    .fundo{
-    background-size: cover;
-    width: 100%;
+    body{
+    background: #515151;
     position: absolute;
-    height: 100%;
+    background-size: cover;
     }
-    .myfamily{
-    font-family: Quicksand;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 38px;
-    line-height: 47px;
-    color: #93E059;
+
+    hr{
+        background: #FAFF03;
     }
-    #nome{
-        margin-top: 35%;
-        color:#93E059;
+    .botao{
+font-family: Lato;
+font-style: normal;
+font-weight: 600;
+font-size: 21px;
+text-align: center;
+color: #515151;
+width: 133px;
+height: 60px;
+background: #FAFF03;
+border-radius: 10px;
+margin-left: 1200px;
     }
-    img{
-        margin-top: 35%;
-    }
-    p{
-    margin-top: 10%;
-   font-family: Quicksand;
-   font-style: normal;
-   font-weight: normal;
-   font-size: 35px;
-   line-height: 44px;
-   color: #FFFFFF;
-    }
-    .btn-custom{
-        margin-top: 30px;
-        border-radius: 94px;
-        width:150px;
-        height:150px;
-        color:#93E059;
-        background-color:rgba(196, 196, 196, 0.23);
-        border-style: solid;
-      }
-    .form{
-        
-        margin-top: 30px;
-    }
-    h5{
-    margin-left: 25%;
-    font-family: Quicksand;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 38px;
-    line-height: 47px;
-    color: #4A5248;
-    }
-    input{
-        margin-left:25%;
-    }
-    

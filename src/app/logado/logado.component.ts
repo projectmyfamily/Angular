@@ -1,10 +1,8 @@
-import { MembrosDTO } from './../model/membrosDTO';
 import { AccountDTO } from './../model/accountDTO';
 import { StorageService } from './../services/storageService';
 import { AccountService } from './../services/account.service';
 import { Component, OnInit, Injectable } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-logado',

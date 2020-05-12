@@ -1,5 +1,5 @@
 <!-- início do modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+<!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -48,46 +48,44 @@
 
         </div>
     </div>
-</div>
+</div> -->
 <!-- fim do modal -->
 
-
-<body>
-
-    <div class="col-12 fundo">
-        <div class="row">
-
-            <div class="col-md-6 col-12">
-                <a class="navbar-toggler myfamily" style="color:#93E059;">MyFamily</a>
-            </div>
-
-            <div class="col-md-6 col-12 text-right">
-                <button class="navbar-toggler myfamily" (click)="logout()">Sair</button>
-            </div>
-        </div>
-
-        <div class="form-group text-center col-12">
-            <p>Selecionar perfil</p>
-        </div>
-
-        <div class="row justify-content-md-center">
-            <a *ngFor="let membros of membros" class="btn btn-custom">
-                <p data-toggle="modal" (click)="pegaPin(membros.pin, membros.id)" data-target="#exampleModal" id="nome">
-                    {{membros.nome}}</p>
-                <i (click)="deletar(membros.id)" type="submit" class="btn material-icons">
-                    highlight_off
-                </i>
-            </a>
-            <div>
-                <a *ngIf="membros.length < 6" class="btn btn-custom col-12" data-toggle="modal"
-                    data-target="#exampleModalCenter">
-                    <img src="assets/add.svg" alt="">
+<!-- <body>
+    <nav class="nav-bar">
+        <div class="row justify-content-md-center col-12">
+            <div class="row justify-content-md-center col-md-6 col-12">
+                <a class="navbar-toggler" href="/">
+                    <img src="assets/myfamily.png" alt="">
                 </a>
             </div>
         </div>
-        <div class="text-center">
+    </nav>
+
+    <hr>
+
+    <div class="col-md-6 col-12">
+        <button class="nav-link botao" (click)="logout" >Sair<img src="assets/sair.png" alt=""></button>
+    </div>
+
+    <div class="row justify-content-md-center">
+        <a *ngFor="let membros of membros" class="btn btn-custom">
+            <p data-toggle="modal" (click)="pegaPin(membros.pin, membros.id)" data-target="#exampleModal" id="nome">
+                {{membros.nome}}</p>
+            <i (click)="deletar(membros.id)" type="submit" class="btn material-icons">
+                highlight_off
+            </i>
+        </a>
+        <div>
+            <a *ngIf="membros.length < 6" class="btn btn-custom col-12" data-toggle="modal"
+                data-target="#exampleModalCenter">
+                <img src="assets/mais.png" alt="">
+            </a>
         </div>
     </div>
+    <div class="text-center">
+    </div> -->
+
 
 
 
@@ -95,7 +93,7 @@
     <!-- Modal perfil-->
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -116,16 +114,47 @@
         </div>
     </div>
 
+ -->
+<!-- 
+
+</body> -->
 
 
 
-</body>
 
-
-
-
-<!-- <form action=""> 
- <input type="file" name="foto" (change) = selectFile($event)> 
- </form> 
-
- <img [src]="base64textString" alt="">  -->
+<body>
+    <nav class="nav-bar header">
+      <div class="row col-12">
+        <div class="col-md-6 col-12">
+          <a class="navbar-toggler myfamily" href="/">
+            <img src="assets/myfamily.png" alt="" width="25%;">
+          </a>
+        </div>
+  
+        <div class="col-md-6 col-12 text-right">
+          <button class="nav-link botao" routerLink="/login">Entrar</button>
+        </div>
+        
+      </div>
+    </nav>
+  
+  
+      <div class="form-group justify-content-md-center col-12">
+        <p id="paragrafo" style="margin-top: 150px;">
+          Planeje junto com sua família tudo que a vida pode te proporcionar de bom!
+        </p>
+  
+        <div class="col-12 ">
+          <p id="paragrafo">Informe seu email para criar sua conta.</p>
+        </div>
+  
+        <div class="form-group col-12 ">
+          <input name="email" [(ngModel)]="email"  class="inputEmail col-md-6" placeholder="E-mail">
+          <button class="nav-link btn " (click)="subscribe()" >Entre para o MyFamily</button>
+        </div>
+  
+        
+      </div>
+  
+  
+  </body>
