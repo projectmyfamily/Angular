@@ -1,24 +1,7 @@
-.card{  
-    
-    margin-left: 5%;
-    margin-bottom: 20px;
-    height: 250px;
-    background: #FFFFFF;
-border: 1px solid rgba(74, 82, 72, 0.94);
-box-sizing: border-box;
-box-shadow: 0px 4px 7px rgba(74, 82, 72, 0.66);
-border-radius: 9px;
-}
-h5{
-    text-align: center; 
-    font-family: Quicksand; 
-    font-style: normal;
-    font-weight: bold;
-    line-height: 56px;
-}
 h3{
+        color: #515151;
         text-align: center; 
-        font-family: Quicksand; 
+        font-family: Lato; 
         font-style: normal;
         font-weight: bold;
         line-height: 50px;
@@ -30,26 +13,29 @@ border: 1px solid rgba(74, 82, 72, 0.74);
 box-sizing: border-box;
 border-radius: 14px;
 }
-.circular--square {
-    border-top-left-radius: 50% 50%;
-    border-top-right-radius: 50% 50%;
-    border-bottom-right-radius: 50% 50%;
-    border-bottom-left-radius: 50% 50%;
-  }
-  .form{
-    /* margin-left: 60px; */
+select{
+margin-left: 13%;
+background: #FFFFFF;
+border: 1px solid rgba(74, 82, 72, 0.74);
+box-sizing: border-box;
+border-radius: 14px;
+width: 80%;
+}
+.form{
     margin-top: 20px;
 }
 .btnadd{
 margin-left: 40%;
-width: 279px;
-height: 58px;
-background: #4A5248;
-border-radius: 25px;
-color: #93E059;
-font-family: Quicksand;
+width: 304px;
+height: 56px;
+left: 580px;
+top: 1390px;
+background: #515151;
+border-radius: 9px;
+font-family: Lato;
 font-style: normal;
-font-weight: bold;
-font-size: 29px;
-line-height: 36px;
+font-weight: normal;
+font-size: 25px;
+line-height: 30px;
+color: #FAFF03;
 }

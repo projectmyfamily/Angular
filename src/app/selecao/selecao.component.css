@@ -1,22 +1,21 @@
-    body{
+ body{
     background: #515151;
-    position: absolute;
     background-size: cover;
+    width: 100%;
+    position: absolute;
     }
 
-    hr{
-        background: #FAFF03;
-    }
-    .botao{
+nav{
+    margin-left: 36%;
+}
+.botao{
+width: 133px;
+height: 70px;
+background: #FAFF03;
+border-radius: 10px;
 font-family: Lato;
 font-style: normal;
 font-weight: 600;
-font-size: 21px;
-text-align: center;
+font-size: 25px;
 color: #515151;
-width: 133px;
-height: 60px;
-background: #FAFF03;
-border-radius: 10px;
-margin-left: 1200px;
-    }
+}

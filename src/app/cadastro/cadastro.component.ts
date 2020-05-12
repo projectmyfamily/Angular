@@ -3,6 +3,7 @@ import { AccountService } from './../services/account.service';
 import { HomeComponent } from './../home/home.component';
 import { Cadastrar } from './../model/cadastrar';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -10,10 +11,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro.component.css']
 })
 export class CadastroComponent implements OnInit {
-
-
-
-
 
 cad: Cadastrar = { 
 nome: "",
@@ -26,24 +23,17 @@ err = ""
 validForms: boolean = false
 validMsg = ""
 
-
-
-
-
   constructor(public account: AccountService, 
     public home: HomeComponent,
-    private storage: StorageService
+    private storage: StorageService,
+    public router: Router
 
     ) { }
 
   ngOnInit() {
     this.cad.email = this.storage.getAny()
 
-    
-   
   }
-
-
 
   cadastro(){ 
     if(this.cad.nome && this.cad.email && this.cad.senha && this.cad.senha2 != null){ 
@@ -53,20 +43,17 @@ validMsg = ""
       this.account.insert(this.cad)
       .subscribe(response =>{ 
         console.log("Cadastrado com sucesso")
-        
+        this.router.navigate(['/login'])
       }), error =>{ 
         console.log (error)
       }
     }else{ 
       this.validMsg = "O formulário contêm erros, por favor verifique!"
     }
-  
-
-
 
   }
 
-  
+
   validPass(){ 
     if(this.cad.senha != this.cad.senha2){
       this.err = "As senhas são diferentes";
