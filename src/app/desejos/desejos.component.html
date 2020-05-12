@@ -1,29 +1,108 @@
-<body >
-  <hr>
-<div class="container col-md-3 col-12">
-  <h3>Adicionar desejo</h3>
-</div>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#"><img src="assets/logo.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<form class="form-row form justify-content-md-center">
-  <div class="col-md-8 col-12">
-    <div class="form-group col-md-10">
-      <input type="text" class="form-control " placeholder="Desejo">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="menu" href="/logado" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Menu
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item itens" href="/logado">Home</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item itens" href="/tarefas">Tarefas</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item itens" href="/desejos">Desejos</a>
+          </div>
+        </li>
+      </ul>
+
+      <form class="form-inline my-2 my-lg-0">
+        <img class="sino" src="assets/sino.png" data-toggle="dropdown">
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item perfil"></a>
+        </div>
+      </form>
+
+      <form class="form-inline my-2 my-lg-0">
+        <button class="botao" type="submit" data-toggle="dropdown">Perfil</button>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item perfil"></a>
+        </div>
+      </form>
+
+
     </div>
-    <div class="form-group col-md-10">
-      <input type="text" class="form-control " placeholder="Valor">
-    </div>
+  </nav>
+
+  <div class="container col-md-3 col-12">
+    <h3>Desejos</h3>
+  </div>
+
+  <hr>
+
+  <div class="card card2 col-12 mx-auto">
+    <img src="assets/core.png" width="120px;" height="120px;">
+  </div>
+  <div class="card card2 col-12 mx-auto">
+    <img src="assets/core.png" width="120px;" height="120px;">
+  </div>
+  <div class="card card2 col-12 mx-auto">
+    <img src="assets/core.png" width="120px;" height="120px;">
+  </div>
+
+  <hr>
+
+  <div class="container col-md-3 col-12">
+    <h3>Adicionar desejo</h3>
+  </div>
+
+  <form class="form-row form justify-content-md-center">
+    <div class="col-md-8 col-12">
+      <div class="form-group col-md-10">
+        <input type="text" class="form-control " placeholder="Desejo">
+      </div>
+      <div class="form-group col-md-10">
+        <input type="text" class="form-control " placeholder="Valor">
+      </div>
 
       <select class="custom-select form-group col-md-10" id="inputGroupSelect01">
-        <option selected>Choose...</option>
+        <option selected>Para...</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
       </select>
-  
-    <div class="form-group col-md-10">
-      <button class="nav-link btnadd ">Adicionar</button>
+
+      <div class="form-group col-md-10">
+        <button class="nav-link btnadd ">Adicionar</button>
+      </div>
     </div>
-  </div>
-</form>
+  </form>
+
+
+
+
+
+
+
+  <nav class="nav-bar">
+
+    <div class="footer">
+      <a class="navbar-brand"><img src="assets/myfamily.png" width="55%"></a>
+      <p>Familia por todos, todos por um.</p>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  </nav>
 
 </body>

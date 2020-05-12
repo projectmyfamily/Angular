@@ -17,10 +17,7 @@ export class LoginComponent implements OnInit {
     senha: ""
 }
 
-
 err: string 
-
-
 
   constructor(public auth: Auth, public router: Router, public storage: StorageService) { }
 
@@ -37,7 +34,7 @@ if(this.storage.getLocalUser()){
     this.auth.successLogin(response.headers.get('Authorization'));
      console.log("login success")
      
-     this.router.navigate(["/selecao"])
+     this.router.navigate(["/logado"])
   
 
     }, error =>{ 
@@ -45,7 +42,6 @@ if(this.storage.getLocalUser()){
       this.err = "Email ou senha incorretos!"
     })
 }
-
 
 
 account(){
@@ -56,7 +52,5 @@ account(){
   ) 
 
 }
-
-
 
 }

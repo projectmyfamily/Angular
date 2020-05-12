@@ -7,19 +7,21 @@ h3{
         line-height: 50px;
 }
 input{
-    margin-left: 15%;
+    width: 512px;
+    height: 42px;
+    margin-left: 28%;
     background: #FFFFFF;
 border: 1px solid rgba(74, 82, 72, 0.74);
 box-sizing: border-box;
-border-radius: 14px;
 }
 select{
-margin-left: 13%;
+margin-left: 24%;
 background: #FFFFFF;
 border: 1px solid rgba(74, 82, 72, 0.74);
 box-sizing: border-box;
-border-radius: 14px;
 width: 80%;
+width: 512px;
+height: 42px;
 }
 .form{
     margin-top: 20px;
@@ -38,4 +40,59 @@ font-weight: normal;
 font-size: 25px;
 line-height: 30px;
 color: #FAFF03;
+}
+hr{
+    margin-top: 3%;
+width: 1100px;
+height: 0px;
+left: 153px;
+top: 978.02px;
+border: 1px solid #515151;
+transform: rotate(-0.21deg);
+}
+.card2{
+    margin-top: 1%;
+    width: 1000px;
+height: 150px;
+background: #515151;
+border-radius: 8px;
+}
+.botao{
+    width: 80px;
+height: 80px;
+left: 1308px;
+top: 49px;
+border-radius: 150px;
+background: #FAFF03;
+
+}
+.menu{
+width: 80px;
+height: 45px;
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 45px;
+color: #FAFF03;
+}
+nav{
+    background: #515151;
+}
+.sino{
+    margin-right: 50px;
+}
+p{
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+font-size: px;
+line-height: 30px;
+display: flex;
+align-items: flex-end;
+text-align: center;
+color: #FAFF03;
+}
+.footer{
+    margin-left: 43%;
 }
