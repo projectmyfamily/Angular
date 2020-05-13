@@ -162,7 +162,7 @@ console.log(pin)
 }
 
 
-sendPicture() { 
+/*sendPicture() { 
   this.account.uploadPicture(this.base64textString).subscribe( 
     response => { 
       console.log(response)
@@ -170,7 +170,7 @@ sendPicture() {
   )
 
   
-}
+}*/
 
 
 
